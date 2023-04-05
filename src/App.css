@@ -15,6 +15,9 @@ nav {
   color: white;
   text-transform: capitalize;
 }
+.contenedor_izquierda .imagen_logo {
+  font-size: 2000px;
+}
 
 .contenedor_derecha {
   display: flex;
@@ -47,9 +50,8 @@ nav {
     transition: 0.3s ease all;
   }
   .nav_items.open {
-    margin-top: 5%;
     transform: translateX(0) !important;
-    background: #E9E9E9;
+    background: #404040;
   }
   .nav_toggle {
     display: flex !important;
@@ -77,6 +79,9 @@ nav {
 }
 /* Estilos 500-400px */
 @media (max-width: 500px) {
+  .imagen_logo {
+    width: 20vw;
+  }
   .nav_items h1 {
     font-size: 6vw;
   }
@@ -217,6 +222,7 @@ header {
 section {
   padding: 30px 0px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }

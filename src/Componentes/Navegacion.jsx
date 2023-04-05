@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../Imagenes/logo.svg';
+import logo from "../Imagenes/logo.svg";
 import { useState } from "react";
 
 function Navegacion (){

@@ -14,6 +14,10 @@ nav{
   margin: 0 15px;
   color: white;
   text-transform: capitalize;
+
+  .imagen_logo{
+    font-size: 2000px;
+  }
 }
 
 .contenedor_derecha{
@@ -38,7 +42,6 @@ nav{
   /* Estilos boton hamburguesa */
 
 @media (max-width: 1200px) {
-  
   .nav_items{
     position: absolute;
     top: 100%;
@@ -51,9 +54,8 @@ nav{
   }
   
   .nav_items.open{
-    margin-top: 5%;
     transform: translateX(0) !important;
-    background: #E9E9E9;
+    background: #404040;
   }  
 
   .nav_toggle{
@@ -90,7 +92,10 @@ nav{
   /* Estilos 500-400px */
 
 @media (max-width: 500px) {
-  
+  .imagen_logo{
+    width: 20vw;
+  }
+
   .nav_items{
     h1{
       font-size: 6vw;
