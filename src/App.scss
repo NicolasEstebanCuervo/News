@@ -1,0 +1,28 @@
+@import "./Hojas_De_Estilo/Navegacion";
+@import "./Hojas_De_Estilo/Header_Left";
+@import "./Hojas_De_Estilo/Header_Right";
+@import "./Hojas_De_Estilo/Sub_Temas";
+
+.container{
+  margin-top: 2%;
+}
+
+header{
+  padding: 30px 0px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+section{
+  padding: 30px 0px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (max-width: 1000px) {
+  header{
+    flex-wrap: wrap;
+  }
+}
