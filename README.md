@@ -34,6 +34,8 @@
 en las dependencia del proyecto. Para solucionarlo abra la terminal del proyecto y ejecute el siguiente comando "npm install react-scripts
 ".
 
+---
+
 ###  🧑 Sobre mi:
    
 Soy una persona capacitada para estructurar un proyecto en base al conocimiento en herramientas de FrontEnd, algunas de las herramientas y lenguajes en las cuales me destacó son:
