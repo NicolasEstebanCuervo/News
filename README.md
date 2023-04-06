@@ -1,7 +1,7 @@
 <div id="Header" align="center">
 
-   <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" width="300">   
-   <h1 align="center">FormPet 🐱 - Finalizado</h1>
+   <img src="https://media.giphy.com/media/3o6Zt1YEvmtmPc6Mxi/giphy.gif" width="300">   
+   <h1 align="center">News 📆 - Finalizado</h1>
 
 </div>
    
