@@ -62,6 +62,11 @@ const ContainerCardsNews = styled.section`
         width: 95%;
     }
 
+    
+    @media (max-width: 600px) {
+            gap: 5vh;
+    }
+
     @media (max-width: 400px) {
         gap: 2vh;
     }
@@ -88,9 +93,6 @@ const TitleCardsNews = styled.h1`
         font-size: 40px;
     }
 
-    @media (max-width: 600px) {
-        font-size: 7vw;
-    }
 
     @media (max-width: 400px) {
         font-size: 13vw;

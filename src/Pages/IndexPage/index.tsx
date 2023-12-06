@@ -31,6 +31,10 @@ const ContainerMain = styled.main`
     flex-direction: column;
     justify-content: center;
     gap: 5vh;
+
+    @media (max-width: 400px) {
+        gap: 2vh;
+    }
 `;
 
 const SubContainerMain = styled.div`
@@ -39,6 +43,10 @@ const SubContainerMain = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 600px) {
+        gap: 5vh;
+    }
 
     @media (max-width: 400px) {
         gap: 2vh;
