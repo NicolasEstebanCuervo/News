@@ -120,7 +120,6 @@ const ContainerCardIndividual = styled.div`
 `;
 
 const ContainerImage = styled.img`
-    object-fit: contain;
     width: 100%;
     max-width: 200px;
     border-radius: 25px;

@@ -1,27 +1,48 @@
 import styled from "@emotion/styled";
+import { useNews } from "../../../Context/Context";
 
 export default function EconomyPage() {
+    const { newsData } = useNews();
+
+    if (!newsData || !newsData.items || newsData.items.length === 0) {
+        return <div>Cargando...</div>;
+    }
+
+    const noticiasEntretenimiento = newsData.items.filter(
+        (noticia) => noticia.category === "economy"
+    );
+
+    if (noticiasEntretenimiento.length === 0) {
+        return <div>No hay noticias de entretenimiento disponibles.</div>;
+    }
+
+    const numeroAleatorio = Math.floor(
+        Math.random() * noticiasEntretenimiento.length
+    );
+
+    const noticiaSeleccionada = noticiasEntretenimiento[numeroAleatorio];
+
     return (
         <EconomySection>
             <SubContainerEconomy>
-                <TextContainer>
-                    <TitleEconomy>Explore Our Economy Tailored to Your Needs</TitleEconomy>
-                    <DescriptionEconomy>
-                        Discover how we can assist you in achieving your economic goals.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Discover how we can assist you in achieving your economic goals.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Discover how we can assist you in achieving your economic goals.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Discover how we can assist you in achieving your economic goals.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </DescriptionEconomy>
-                        <LearnMoreButton href="/economy">
+                {noticiaSeleccionada && (
+                    <TextContainer>
+                        <TitleEconomy>
+                           {noticiaSeleccionada.title}
+                        </TitleEconomy>
+                        <DescriptionEconomy>
+                        {noticiaSeleccionada.description}
+                        </DescriptionEconomy>
+                        <LearnMoreButton href={`/Economia/:${noticiaSeleccionada.id}`}>
                             Learn More About
                             <ButtonIcon className="bi bi-arrow-right-short"></ButtonIcon>
                         </LearnMoreButton>
-                </TextContainer>
-                <EconomyImage src={require("../../../Assets/Images/imagen7.jpg")} alt="Economy Image" />
+                    </TextContainer>
+                )}
+                <EconomyImage
+                    src={require("../../../Assets/Images/imagen7.jpg")}
+                    alt="Economy Image"
+                />
             </SubContainerEconomy>
         </EconomySection>
     );
@@ -177,4 +198,4 @@ const EconomyImage = styled.img`
     @media (max-width: 600px) {
         max-width: 100%;
     }
-`
+`;
