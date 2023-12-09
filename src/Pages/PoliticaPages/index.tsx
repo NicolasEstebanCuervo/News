@@ -4,6 +4,7 @@ import Footer from "../../Components/Footer";
 import HeaderComponent from "../../Components/ComponentesPoliticaPage/Header";
 import PoliticNew from "../../Components/ComponentesPoliticaPage/PoliticNew/Index";
 import WeeklyNews from "../../Components/ComponentesPoliticaPage/WeeklyNews";
+import MultiNews from "../../Components/ComponentesPoliticaPage/MultiNews";
 
 export default function PoliticaPage() {
     return (
@@ -13,6 +14,7 @@ export default function PoliticaPage() {
                 <HeaderComponent />
                 <PoliticNew />
                 <WeeklyNews/>
+                <MultiNews />
             </SubContainerMain>
             <Footer/>
         </ContainerMain>

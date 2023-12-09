@@ -35,7 +35,6 @@ export default function EconomyPage() {
                         </DescriptionEconomy>
                         <LearnMoreButton href={`/Economia/:${noticiaSeleccionada.id}`}>
                             Learn More About
-                            <ButtonIcon className="bi bi-arrow-right-short"></ButtonIcon>
                         </LearnMoreButton>
                     </TextContainer>
                 )}
@@ -155,22 +154,6 @@ const LearnMoreButton = styled.a`
 
     @media (max-width: 400px) {
         font-size: 6vw;
-    }
-`;
-
-const ButtonIcon = styled.i`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-
-    @media (max-width: 500px) {
-        font-size: 8vw;
-        width: 8vw;
-        height: 8vw;
     }
 `;
 

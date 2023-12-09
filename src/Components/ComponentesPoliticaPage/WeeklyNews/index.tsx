@@ -125,7 +125,6 @@ const NewsImage = styled.img`
     @media (max-width: 600px) {
         border-radius: 2%;
     }
-
 `;
 
 const NewsInfoContainer = styled.div`
