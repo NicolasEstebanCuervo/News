@@ -1,32 +1,36 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom"
-import Post from './Pages/IndexPage';
-import CienciaPage from "./Pages/CienciaPage";
-import CulturaPage from "./Pages/CulturaPage";
-import DeportesPage from "./Pages/DeportesPage";
-import EconomiaPage from "./Pages/EconomiaPage";
-import EntretenimientoPage from "./Pages/EntretenimientoPage";
-import PoliticaPage from "./Pages/PoliticaPages";
-import TecnologiaPage from "./Pages/TecnologiaPage";
-import CienciaPageIndividual from "./Pages/CienciaPage/CienciaPageindividual";
-import CulturaPageIndividual from "./Pages/CulturaPage/CulturaPageindividual";
-import DeportesPageIndividual from "./Pages/DeportesPage/DeportesPageindividual";
-import EconomiaPageIndividual from "./Pages/EconomiaPage/EconomiaPageindividual";
-import EntretenimientoPageIndividual from "./Pages/EntretenimientoPage/EntretenimientoPageindividual";
-import PoliticaPageIndividual from "./Pages/PoliticaPages/PoliticaPageindividual";
-import TecnologiaPageIndividual from "./Pages/TecnologiaPage/TecnologiaPageindividual";
+import IndexPage from './Pages/IndexPage';
+import PoliticsPage from "./Pages/PoliticsPage";
+import EconomyPage from "./Pages/EconomyPage";
+
+
+
+import CienciaPage from "./Pages/SciencePage";
+import CulturaPage from "./Pages/SportsPage";
+import DeportesPage from "./Pages/SportsPage";
+import EntretenimientoPage from "./Pages/EntertainmentPage";
+import TecnologiaPage from "./Pages/TecnologyPage";
+import CienciaPageIndividual from "./Pages/SciencePage/SciencePageindividual";
+import CulturaPageIndividual from "./Pages/SportsPage/SportsPageindividual";
+import DeportesPageIndividual from "./Pages/SportsPage/SportsPageindividual";
+import EconomiaPageIndividual from "./Pages/EconomyPage/EconomyPageindividual";
+import EntretenimientoPageIndividual from "./Pages/EntertainmentPage/EntertainmentPageindividual";
+import PoliticaPageIndividual from "./Pages/PoliticsPage/PoliticsPageindividual";
+import TecnologiaPageIndividual from "./Pages/TecnologyPage/TecnologyPageindividual";
+
 
 function App() {
   return (
     <div className='App'>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Post></Post>}/>
+          <Route path="/" element={<IndexPage></IndexPage>}/>
           <Route path="/Ciencia" element={<CienciaPage></CienciaPage>}/>
           <Route path="/Cultura" element={<CulturaPage></CulturaPage>}/>
           <Route path="/Deportes" element={<DeportesPage></DeportesPage>}/>
-          <Route path="/Economia" element={<EconomiaPage></EconomiaPage>}/>
+          <Route path="/Economia" element={<EconomyPage></EconomyPage>}/>
           <Route path="/Entretenimiento" element={<EntretenimientoPage></EntretenimientoPage>}/>
-          <Route path="/Politica" element={<PoliticaPage></PoliticaPage>}/>
+          <Route path="/Politica" element={<PoliticsPage></PoliticsPage>}/>
           <Route path="/Tecnologia" element={<TecnologiaPage></TecnologiaPage>}/>
           
           <Route path="/Ciencia/:id" element={<CienciaPageIndividual></CienciaPageIndividual>}/>

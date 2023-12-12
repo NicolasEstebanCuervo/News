@@ -18,6 +18,8 @@ export default function CardsNews() {
 
     const noticiasLimitadas = noticiasTecnologia.slice(0, 4);
 
+    const imagenesFijas = ["TecnologyImage1.webp", "TecnologyImage2.webp", "TecnologyImage3.webp", "TecnologyImage4.webp"];
+
     return (
         <ContainerCardsNews>
             <TitleCardsNews>Tecnologia</TitleCardsNews>
@@ -25,9 +27,9 @@ export default function CardsNews() {
                 {noticiasLimitadas.map((noticia, item) => (
                     <ContainerCardIndividual key={item}>
                         <ContainerImage
-                            src={require(`../../../Assets/Images/imagen${
-                                item + 1
-                            }.jpg`)}
+                            src={
+                                require(`../../../Assets/Images/${imagenesFijas[item]}`)
+                            } 
                             alt={`Imagen ${item + 1}`}
                         />
                         <ContainerTexts>
@@ -62,9 +64,8 @@ const ContainerCardsNews = styled.section`
         width: 95%;
     }
 
-    
     @media (max-width: 600px) {
-            gap: 5vh;
+        gap: 5vh;
     }
 
     @media (max-width: 400px) {
@@ -92,7 +93,6 @@ const TitleCardsNews = styled.h1`
     @media (max-width: 750px) {
         font-size: 40px;
     }
-
 
     @media (max-width: 400px) {
         font-size: 13vw;

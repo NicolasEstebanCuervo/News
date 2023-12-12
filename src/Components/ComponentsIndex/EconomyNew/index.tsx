@@ -27,19 +27,19 @@ export default function EconomyPage() {
             <SubContainerEconomy>
                 {noticiaSeleccionada && (
                     <TextContainer>
-                        <TitleEconomy>
-                           {noticiaSeleccionada.title}
-                        </TitleEconomy>
+                        <TitleEconomy>{noticiaSeleccionada.title}</TitleEconomy>
                         <DescriptionEconomy>
-                        {noticiaSeleccionada.description}
+                            {noticiaSeleccionada.description}
                         </DescriptionEconomy>
-                        <LearnMoreButton href={`/Economia/:${noticiaSeleccionada.id}`}>
+                        <LearnMoreButton
+                            href={`/Economia/:${noticiaSeleccionada.id}`}
+                        >
                             Learn More About
                         </LearnMoreButton>
                     </TextContainer>
                 )}
                 <EconomyImage
-                    src={require("../../../Assets/Images/imagen7.jpg")}
+                    src={require("../../../Assets/Images/EconomyImage1.webp")}
                     alt="Economy Image"
                 />
             </SubContainerEconomy>

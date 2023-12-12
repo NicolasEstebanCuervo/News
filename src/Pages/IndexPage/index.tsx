@@ -6,6 +6,7 @@ import CardsNews from "../../Components/ComponentsIndex/CardsNews";
 import MultiNews from "../../Components/ComponentsIndex/MultiNews";
 import Footer from "../../Components/Footer";
 import EconomyNew from "../../Components/ComponentsIndex/EconomyNew";
+import Phrase from "../../Components/ComponentsIndex/Phrase";
 
 export default function IndexPage() {
     return (
@@ -16,12 +17,12 @@ export default function IndexPage() {
                     <HeaderComponent />
                     <NewComponent />
                 </ContainerHeader>
+                <Phrase />
                 <CardsNews />
                 <MultiNews />
                 <EconomyNew />
             </SubContainerMain>
-            <Footer/>
-
+            <Footer />
         </ContainerMain>
     );
 }

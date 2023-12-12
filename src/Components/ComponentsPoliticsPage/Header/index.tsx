@@ -25,7 +25,7 @@ export default function HeaderComponent() {
     return (
         <ContainerMain>
             <ContainerImage
-                src={require("../../../Assets/Images/PoliticsImage1.webp")}
+                src={require("../../../Assets/Images/PoliticsImage4.webp")}
             ></ContainerImage>
 
             {noticiaSeleccionada && (
@@ -39,11 +39,6 @@ export default function HeaderComponent() {
                         <DescriptionHeader>
                             {noticiaSeleccionada.description}
                         </DescriptionHeader>
-                        <ButtonHeader
-                            href={`/Entretenimiento/:${noticiaSeleccionada.id}`}
-                        >
-                            Read More
-                        </ButtonHeader>
                     </ContainerTextsDescription>
                 </ContainerTexts>
             )}
@@ -57,54 +52,14 @@ const ContainerMain = styled.header`
     justify-content: center;
     align-items: center;
     gap: 3vh;
-    max-width: 750px;
-    width: 50%;
-    padding: 5% 0;
+    width: 90%;
     font-family: "Noto Serif", serif;
-
-    @media (max-width: 900px) {
-        width: 50%;
-    }
-
-    @media (max-width: 600px) {
-        width: 90%;
-    }
 `;
 
 const ContainerImage = styled.img`
-    max-width: 600px;
-
-    @media (max-width: 1250px) {
-        max-width: 650px;
-    }
-
-    @media (max-width: 1200px) {
-        max-width: 600px;
-    }
-
-    @media (max-width: 1100px) {
-        max-width: 550px;
-    }
-
-    @media (max-width: 1000px) {
-        max-width: 500px;
-    }
-
-    @media (max-width: 900px) {
-        max-width: 450px;
-    }
-    @media (max-width: 800px) {
-        max-width: 400px;
-    }
-
-    @media (max-width: 700px) {
-        max-width: 350px;
-    }
+    width: 80%;
 
     @media (max-width: 600px) {
-        max-width: 480px;
-    }
-    @media (max-width: 500px) {
         width: 100%;
     }
 `;
@@ -113,18 +68,9 @@ const ContainerTexts = styled.div`
     display: flex;
     gap: 2%;
     justify-content: center;
-    width: 90%;
-
-    @media (max-width: 1500px) {
-        width: 100%;
-    }
+    width: 80%;
 
     @media (max-width: 1200px) {
-        flex-direction: column;
-    }
-
-    @media (max-width: 800px) {
-        width: 55vw;
         flex-direction: column;
     }
 
@@ -135,13 +81,14 @@ const ContainerTexts = styled.div`
 
 const ContainerTitleHeader = styled.div`
     width: 60%;
-    @media (max-width: 1200px) {
+
+    @media (max-width: 600px) {
         width: 100%;
     }
 `;
 
 const TitleTextHeader = styled.h1`
-    font-size: 27px;
+    font-size: 30px;
     font-weight: 800;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -149,17 +96,16 @@ const TitleTextHeader = styled.h1`
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
 
-
     @media (max-width: 1200px) {
-        font-size: 22px;
+        font-size: 25px;
     }
 
     @media (max-width: 900px) {
-        font-size: 20px;
+        font-size: 23px;
     }
 
     @media (max-width: 700px) {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     @media (max-width: 600px) {
@@ -183,19 +129,19 @@ const ContainerTextsDescription = styled.div`
 `;
 
 const DescriptionHeader = styled.h3`
-    font-size: 17px;
+    font-size: 20px;
     margin: 0;
 
     @media (max-width: 1200px) {
-        font-size: 20px;
+        font-size: 22px;
     }
-    
+
     @media (max-width: 1000px) {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     @media (max-width: 700px) {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     @media (max-width: 600px) {
@@ -204,28 +150,5 @@ const DescriptionHeader = styled.h3`
 
     @media (max-width: 400px) {
         font-size: 5vw;
-    }
-`;
-
-const ButtonHeader = styled.a`
-    color: #000;
-    text-decoration: none;
-    background-color: #f9c80e;
-    border: none;
-    padding: 8px 40px;
-    font-size: 17px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 15px;
-    transition: background-color 0.3s;
-
-    :hover {
-        background: #e7b910;
-    }
-
-    @media (max-width: 400px) {
-        font-size: 5vw;
-        padding: 1vh 10vw;
     }
 `;
