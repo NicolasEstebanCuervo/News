@@ -1,4 +1,4 @@
-export default function EntretenimientoPageIndividual (){
+export default function EntertainmentPageIndividual (){
     return(
         <>
             <h1>EntretenimientoPageIndividual</h1>

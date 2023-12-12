@@ -36,7 +36,7 @@ export default function CardsNews() {
                             <NumberNew>{item + 1}</NumberNew>
                             <TitleNew
                                 onClick={() => {
-                                    window.location.href = `/Tecnologia/:${noticia.id}`;
+                                    window.location.href = `/Tecnology/:${noticia.id}`;
                                 }}
                             >
                                 {noticia.title}

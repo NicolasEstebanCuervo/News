@@ -22,15 +22,15 @@ export default function NavBarComponent() {
                     className={`${isOpen ? "show" : ""}`}
                 >
                     <NavigationLinks>
-                        <NavLink href="/">Inicio</NavLink>
-                        <NavLink href="/Politica">Politica</NavLink>
-                        <NavLink href="/Economia">Economia</NavLink>
+                        <NavLink href="/">Home</NavLink>
+                        <NavLink href="/Politics">Politics</NavLink>
+                        <NavLink href="/Economy">Economy</NavLink>
                         <CustomNavDropdown title="Categorías" id="basic-nav-dropdown">
-                            <NavDropdownItem href="/Tecnologia">Tecnologia</NavDropdownItem>
-                            <NavDropdownItem href="/Ciencia">Ciencia</NavDropdownItem>
-                            <NavDropdownItem href="/Entretenimiento">Entretenimiento</NavDropdownItem>
-                            <NavDropdownItem href="/Cultura">Cultura</NavDropdownItem>
-                            <NavDropdownItem href="/Deportes">Deportes</NavDropdownItem>
+                            <NavDropdownItem href="/Tecnology">Tecnology</NavDropdownItem>
+                            <NavDropdownItem href="/Science">Science</NavDropdownItem>
+                            <NavDropdownItem href="/Entertainment">Entertainment</NavDropdownItem>
+                            <NavDropdownItem href="/Culture">Culture</NavDropdownItem>
+                            <NavDropdownItem href="/Sports">Sports</NavDropdownItem>
                         </CustomNavDropdown>
                     </NavigationLinks>
                 </NavbarCollapseStyles>

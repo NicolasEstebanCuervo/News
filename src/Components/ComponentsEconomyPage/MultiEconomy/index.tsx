@@ -35,7 +35,7 @@ export default function MultiEconomy() {
                             ></IconCardMultiPolitica>
                             <TitleCardMultiPolitica
                                 onClick={() => {
-                                    window.location.href = `/Politica/:${noticiasPolitics[index].id}`;
+                                    window.location.href = `/Economy/:${noticiasPolitics[index].id}`;
                                 }}
                             >
                                 {noticiasPolitics[index].title}

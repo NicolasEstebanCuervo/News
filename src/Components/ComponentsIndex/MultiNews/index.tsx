@@ -34,7 +34,7 @@ export default function MultiNews() {
                             <IconCardMultiNews
                                 src={require("../../../Assets/Icons/CultureIcon1.png")}
                             ></IconCardMultiNews>
-                            <TitleCardMultiNews onClick={()=>{window.location.href =`/Politica/:${item.id}`}}>
+                            <TitleCardMultiNews onClick={()=>{window.location.href =`/Culture/:${item.id}`}}>
                                 {item.title}
                             </TitleCardMultiNews>
                             <DescritionCardMultiNews>
@@ -50,7 +50,7 @@ export default function MultiNews() {
                             <IconCardMultiNews
                                 src={require("../../../Assets/Icons/SportIcon1.png")}
                             ></IconCardMultiNews>
-                            <TitleCardMultiNews onClick={()=>{window.location.href =`/Politica/:${item.id}`}}>
+                            <TitleCardMultiNews onClick={()=>{window.location.href =`/Sports/:${item.id}`}}>
                                 {item.title}
                             </TitleCardMultiNews>
                             <DescritionCardMultiNews>
@@ -66,7 +66,7 @@ export default function MultiNews() {
                             <IconCardMultiNews
                                 src={require("../../../Assets/Icons/ScienceIcon1.png")}
                             ></IconCardMultiNews>
-                            <TitleCardMultiNews onClick={()=>{window.location.href =`/Politica/:${item.id}`}}>
+                            <TitleCardMultiNews onClick={()=>{window.location.href =`/Science/:${item.id}`}}>
                                 {item.title}
                             </TitleCardMultiNews>
                             <DescritionCardMultiNews>

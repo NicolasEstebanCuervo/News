@@ -26,7 +26,7 @@ export default function WeeklyNews() {
                         alt={noticia.title}
                     />
                     <NewsInfoContainer>
-                        <NewsTitle href={`Politica/:${noticia.id}`}>{noticia.title}</NewsTitle>
+                        <NewsTitle href={`/Economy/:${noticia.id}`}>{noticia.title}</NewsTitle>
                         <NewsParagraph>
                             Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit. Aliquam sed ipsa enim aut ea. Amet quae

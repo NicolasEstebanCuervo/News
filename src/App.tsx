@@ -2,21 +2,17 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 import IndexPage from './Pages/IndexPage';
 import PoliticsPage from "./Pages/PoliticsPage";
 import EconomyPage from "./Pages/EconomyPage";
-
-
-
-import CienciaPage from "./Pages/SciencePage";
-import CulturaPage from "./Pages/SportsPage";
-import DeportesPage from "./Pages/SportsPage";
-import EntretenimientoPage from "./Pages/EntertainmentPage";
-import TecnologiaPage from "./Pages/TecnologyPage";
-import CienciaPageIndividual from "./Pages/SciencePage/SciencePageindividual";
-import CulturaPageIndividual from "./Pages/SportsPage/SportsPageindividual";
-import DeportesPageIndividual from "./Pages/SportsPage/SportsPageindividual";
-import EconomiaPageIndividual from "./Pages/EconomyPage/EconomyPageindividual";
-import EntretenimientoPageIndividual from "./Pages/EntertainmentPage/EntertainmentPageindividual";
-import PoliticaPageIndividual from "./Pages/PoliticsPage/PoliticsPageindividual";
-import TecnologiaPageIndividual from "./Pages/TecnologyPage/TecnologyPageindividual";
+import TecnologyPage from "./Pages/TecnologyPage";
+import TecnologyPageIndividual from "./Pages/TecnologyPage/TecnologyPageindividual";
+import CulturePage from "./Pages/CulturePage";
+import SportsPage from "./Pages/SportsPage";
+import SciencePage from "./Pages/SciencePage";
+import EntertainmentPage from "./Pages/EntertainmentPage";
+import PoliticsPageIndividual from "./Pages/PoliticsPage/PoliticsPageindividual";
+import EconomyPageIndividual from "./Pages/EconomyPage/EconomyPageindividual";
+import SciencePageIndividual from "./Pages/SciencePage/SciencePageindividual";
+import SportsPageIndividual from "./Pages/SportsPage/SportsPageindividual";
+import EntertainmentPageIndividual from "./Pages/EntertainmentPage/EntertainmentPageindividual";
 
 
 function App() {
@@ -25,21 +21,22 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<IndexPage></IndexPage>}/>
-          <Route path="/Ciencia" element={<CienciaPage></CienciaPage>}/>
-          <Route path="/Cultura" element={<CulturaPage></CulturaPage>}/>
-          <Route path="/Deportes" element={<DeportesPage></DeportesPage>}/>
-          <Route path="/Economia" element={<EconomyPage></EconomyPage>}/>
-          <Route path="/Entretenimiento" element={<EntretenimientoPage></EntretenimientoPage>}/>
-          <Route path="/Politica" element={<PoliticsPage></PoliticsPage>}/>
-          <Route path="/Tecnologia" element={<TecnologiaPage></TecnologiaPage>}/>
+          <Route path="/Politics" element={<PoliticsPage></PoliticsPage>}/>
+          <Route path="/Economy" element={<EconomyPage></EconomyPage>}/>
+          <Route path="/Tecnology" element={<TecnologyPage></TecnologyPage>}/>
+          <Route path="/Culture" element={<CulturePage></CulturePage>}/>
+          <Route path="/Sports" element={<SportsPage></SportsPage>}/>
+          <Route path="/Science" element={<SciencePage></SciencePage>}/>
+          <Route path="/Entertainment" element={<EntertainmentPage></EntertainmentPage>}/>
           
-          <Route path="/Ciencia/:id" element={<CienciaPageIndividual></CienciaPageIndividual>}/>
-          <Route path="/Cultura/:id" element={<CulturaPageIndividual></CulturaPageIndividual>}/>
-          <Route path="/Deportes/:id" element={<DeportesPageIndividual></DeportesPageIndividual>}/>
-          <Route path="/Economia/:id" element={<EconomiaPageIndividual></EconomiaPageIndividual>}/>
-          <Route path="/Entretenimiento/:id" element={<EntretenimientoPageIndividual></EntretenimientoPageIndividual>}/>
-          <Route path="/Politica/:id" element={<PoliticaPageIndividual></PoliticaPageIndividual>}/>
-          <Route path="/Tecnologia/:id" element={<TecnologiaPageIndividual></TecnologiaPageIndividual>}/>
+
+          <Route path="/Politics/:id" element={<PoliticsPageIndividual></PoliticsPageIndividual>}/>
+          <Route path="/Economy/:id" element={<EconomyPageIndividual></EconomyPageIndividual>}/>
+          <Route path="/Tecnology/:id" element={<TecnologyPageIndividual></TecnologyPageIndividual>}/>
+          <Route path="/Culture/:id" element={<SciencePageIndividual></SciencePageIndividual>}/>
+          <Route path="/Sports/:id" element={<SportsPageIndividual></SportsPageIndividual>}/>
+          <Route path="/Science/:id" element={<SciencePageIndividual></SciencePageIndividual>}/>
+          <Route path="/Entertainment/:id" element={<EntertainmentPageIndividual></EntertainmentPageIndividual>}/>
         </Routes>
       </BrowserRouter>
     </div>

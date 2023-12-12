@@ -24,7 +24,7 @@ export default function EconomyNew() {
     return (
         <ContainerPoliticaNew>
             {noticiaSeleccionada && (
-                <TitlePoliticaNews href={`/Politica/:${noticiaSeleccionada.id}`}>
+                <TitlePoliticaNews href={`/Economy/:${noticiaSeleccionada.id}`}>
                     {noticiaSeleccionada.title}
                 </TitlePoliticaNews>
             )}

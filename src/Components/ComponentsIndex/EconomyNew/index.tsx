@@ -32,7 +32,7 @@ export default function EconomyPage() {
                             {noticiaSeleccionada.description}
                         </DescriptionEconomy>
                         <LearnMoreButton
-                            href={`/Economia/:${noticiaSeleccionada.id}`}
+                            href={`/Economy/:${noticiaSeleccionada.id}`}
                         >
                             Learn More About
                         </LearnMoreButton>

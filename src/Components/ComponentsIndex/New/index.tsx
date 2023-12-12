@@ -13,7 +13,7 @@ export default function NewComponent() {
             <TitleNew>Politica</TitleNew>
             {newsData.items.slice(0,3).map((item: NewsItem)=> (
                 <ContainerNew key={item.id}>
-                    <TitleNewIndividual onClick={()=>{window.location.href =`/Politica/:${item.id}`}}>{item.title}</TitleNewIndividual>
+                    <TitleNewIndividual onClick={()=>{window.location.href =`/Politics/:${item.id}`}}>{item.title}</TitleNewIndividual>
                     <DescriptionNew>{item.description}</DescriptionNew>
                     <LineDivider />
                 </ContainerNew>

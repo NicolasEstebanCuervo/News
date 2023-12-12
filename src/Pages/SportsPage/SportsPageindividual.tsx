@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 
-export default function CulturaPageIndividual (){
+export default function SportsPageIndividual (){
 
     const {id} = useParams();
 

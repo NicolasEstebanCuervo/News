@@ -36,7 +36,7 @@ export default function MultiNews() {
                         />
                         <TitleIndividualMultiNews
                             onClick={() => {
-                                window.location.href = `/Politica/:${noticiasPolitics[index].id}`;
+                                window.location.href = `/Politics/:${noticiasPolitics[index].id}`;
                             }}
                         >
                             {noticiasPolitics[index].title}
