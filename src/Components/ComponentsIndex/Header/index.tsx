@@ -213,6 +213,7 @@ const ButtonHeader = styled.a`
     background-color: #f9c80e;
     border: none;
     padding: 8px 45px;
+    text-align: center;
     font-size: 17px;
     border-radius: 4px;
     cursor: pointer;
@@ -226,6 +227,6 @@ const ButtonHeader = styled.a`
 
     @media (max-width: 400px) {
         font-size: 5vw;
-        padding: 1vh 15vw;
+        padding: 1vh 10vw;
     }
 `;
