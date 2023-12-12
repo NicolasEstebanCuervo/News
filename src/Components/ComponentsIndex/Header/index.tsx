@@ -226,6 +226,6 @@ const ButtonHeader = styled.a`
 
     @media (max-width: 400px) {
         font-size: 5vw;
-        padding: 1vh 11vw;
+        padding: 1vh 15vw;
     }
 `;
