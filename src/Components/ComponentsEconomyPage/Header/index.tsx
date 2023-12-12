@@ -57,7 +57,11 @@ const ContainerMain = styled.header`
 `;
 
 const ContainerImage = styled.img`
-    width: 80%;
+    width: 60%;
+
+    @media (max-width: 1200px) {
+        width: 80%;
+    }
 
     @media (max-width: 600px) {
         width: 100%;
@@ -68,10 +72,11 @@ const ContainerTexts = styled.div`
     display: flex;
     gap: 2%;
     justify-content: center;
-    width: 80%;
+    width: 60%;
 
     @media (max-width: 1200px) {
         flex-direction: column;
+        width: 80%;
     }
 
     @media (max-width: 600px) {
