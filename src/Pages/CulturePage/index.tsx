@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import NavBarComponent from "../../Components/NavBar";
 import Footer from "../../Components/Footer";
 import HeaderComponent from "../../Components/ComponentsCulturePage/Header";
+import CultureNew from "../../Components/ComponentsCulturePage/CultureNew";
 import WeeklyNews from "../../Components/ComponentsCulturePage/WeeklyNews";
 import MultiNews from "../../Components/ComponentsCulturePage/MultiNews";
 import MultiCulture from "../../Components/ComponentsCulturePage/MultiCulture";
@@ -12,6 +13,7 @@ export default function CulturePage() {
             <NavBarComponent />
             <SubContainerMain>
                 <HeaderComponent />
+                <CultureNew/>
                 <WeeklyNews/>
                 <MultiNews />
                 <MultiCulture />
