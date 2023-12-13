@@ -95,7 +95,7 @@ export default function PoliticNew() {
                         fermentum nibh justo vel lectus. Lorem ipsum dolor sit
                         amet, consectetur aliquet, neque ac luctus bibendum,
                         libero enim ultricies libero, a fermentum nibh justo vel
-                        lectus.
+                        lectu.
                     </Text>
                 </TextContainer>
             </SubContainerPoliticaNew>
