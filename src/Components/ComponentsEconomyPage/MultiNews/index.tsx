@@ -23,7 +23,7 @@ export default function MultiNews() {
         }
     }
 
-    const imagenesFijas = ["PoliticsImage2.webp","PoliticsImage3.webp","PoliticsImage6.webp"];
+    const imagenesFijas = ["EconomyImage5.webp","EconomyImage4.webp","EconomyImage6.webp"];
 
     return (
         <ContainerMultiNews>

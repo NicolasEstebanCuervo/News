@@ -25,7 +25,7 @@ export default function HeaderComponent() {
     return (
         <ContainerMain>
             <ContainerImage
-                src={require("../../../Assets/Images/PoliticsImage4.webp")}
+                src={require("../../../Assets/Images/EconomyImage3.webp")}
             ></ContainerImage>
 
             {noticiaSeleccionada && (

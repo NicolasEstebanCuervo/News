@@ -9,7 +9,7 @@ export default function CardsNews() {
     }
 
     const noticiasTecnologia = newsData.items.filter(
-        (noticia) => noticia.category === "technology"
+        (noticia) => noticia.category === "tecnology"
     );
 
     if (noticiasTecnologia.length === 0) {

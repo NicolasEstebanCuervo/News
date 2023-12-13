@@ -214,7 +214,8 @@ const ButtonHeader = styled.a`
     border: none;
     padding: 8px 45px;
     text-align: center;
-    font-size: 17px;
+    font-size: 174
+    nmpx;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;

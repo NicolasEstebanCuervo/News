@@ -8,7 +8,7 @@ export default function PoliticNew() {
     }
 
     const noticiasEntretenimiento = newsData.items.filter(
-        (noticia) => noticia.category === "entertainment"
+        (noticia) => noticia.category === "politics"
     );
 
     if (noticiasEntretenimiento.length === 0) {

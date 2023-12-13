@@ -22,7 +22,7 @@ export default function WeeklyNews() {
             {noticiasPolitica.slice(0, 1).map((noticia, index) => (
                 <WeeklyNewsItem key={index}>
                     <NewsImage
-                        src={require("../../../Assets/Images/PoliticsImage5.webp")}
+                        src={require("../../../Assets/Images/EconomyImage2.webp")}
                         alt={noticia.title}
                     />
                     <NewsInfoContainer>

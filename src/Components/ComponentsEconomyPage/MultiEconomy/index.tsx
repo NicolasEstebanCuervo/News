@@ -21,7 +21,7 @@ export default function MultiEconomy() {
         }
     }
     
-    const imagenesFijas = ['PoliticsIcon1.png', 'PoliticsIcon2.png', 'PoliticsIcon3.png'];
+    const imagenesFijas = ['EconomyIcon1.png', 'EconomyIcon2.png', 'EconomyIcon3.png'];
     
     return (
         <ContainerMultiPolitica>
