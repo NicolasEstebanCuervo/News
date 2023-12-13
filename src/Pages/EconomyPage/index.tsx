@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import NavBarComponent from "../../Components/NavBar";
 import Footer from "../../Components/Footer";
 import HeaderComponent from "../../Components/ComponentsEconomyPage/Header";
-import EconomyNew from "../../Components/ComponentsEconomyPage/EconomyNew";
 import WeeklyNews from "../../Components/ComponentsEconomyPage/WeeklyNews";
 import MultiNews from "../../Components/ComponentsEconomyPage/MultiNews";
 import MultiEconomy from "../../Components/ComponentsEconomyPage/MultiEconomy";
@@ -13,7 +12,6 @@ export default function EconomyPage() {
             <NavBarComponent />
             <SubContainerMain>
                 <HeaderComponent />
-                <EconomyNew/>
                 <WeeklyNews/>
                 <MultiNews />
                 <MultiEconomy />

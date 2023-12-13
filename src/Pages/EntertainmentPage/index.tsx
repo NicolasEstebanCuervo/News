@@ -5,7 +5,6 @@ import HeaderComponent from "../../Components/ComponentsEntertainmentPage/Header
 import WeeklyNews from "../../Components/ComponentsEntertainmentPage/WeeklyNews";
 import MultiNews from "../../Components/ComponentsEntertainmentPage/MultiNews";
 import MultiEntertainment from "../../Components/ComponentsEntertainmentPage/MultiEntertainment";
-import EntertainmentNew from "../../Components/ComponentsEntertainmentPage/EntertainmentNew";
 
 export default function EntertainmentPage() {
     return (
@@ -13,7 +12,6 @@ export default function EntertainmentPage() {
             <NavBarComponent />
             <SubContainerMain>
                 <HeaderComponent />
-                <EntertainmentNew/>
                 <WeeklyNews/>
                 <MultiNews />
                 <MultiEntertainment />

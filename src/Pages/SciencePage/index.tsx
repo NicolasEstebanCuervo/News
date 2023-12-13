@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import NavBarComponent from "../../Components/NavBar";
 import Footer from "../../Components/Footer";
 import HeaderComponent from "../../Components/ComponentsSciencePage/Header";
-import ScienceNew from "../../Components/ComponentsSciencePage/ScienceNew";
 import WeeklyNews from "../../Components/ComponentsSciencePage/WeeklyNews";
 import MultiNews from "../../Components/ComponentsSciencePage/MultiNews";
 import MultiScience from "../../Components/ComponentsSciencePage/MultiScience";
@@ -13,7 +12,6 @@ export default function SciencePage() {
             <NavBarComponent />
             <SubContainerMain>
                 <HeaderComponent />
-                <ScienceNew/>
                 <WeeklyNews/>
                 <MultiNews />
                 <MultiScience />
