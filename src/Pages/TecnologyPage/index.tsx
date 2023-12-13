@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import NavBarComponent from "../../Components/NavBar";
 import Footer from "../../Components/Footer";
 import HeaderComponent from "../../Components/ComponentsTecnologyPage/Header";
+import TecnologyNew from "../../Components/ComponentsTecnologyPage/TecnologyNew";
 import WeeklyNews from "../../Components/ComponentsTecnologyPage/WeeklyNews";
 import MultiNews from "../../Components/ComponentsTecnologyPage/MultiNews";
 import MultiTecnology from "../../Components/ComponentsTecnologyPage/MultiTecnology";
@@ -12,6 +13,7 @@ export default function     TecnologyPage() {
             <NavBarComponent />
             <SubContainerMain>
                 <HeaderComponent />
+                <TecnologyNew/>
                 <WeeklyNews/>
                 <MultiNews />
                 <MultiTecnology />
