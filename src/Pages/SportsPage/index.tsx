@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import NavBarComponent from "../../Components/NavBar";
 import Footer from "../../Components/Footer";
 import HeaderComponent from "../../Components/ComponentsSportsPage/Header";
+import SportsNew from "../../Components/ComponentsSportsPage/SportsNew";
 import WeeklyNews from "../../Components/ComponentsSportsPage/WeeklyNews";
 import MultiNews from "../../Components/ComponentsSportsPage/MultiNews";
 import MultiSports from "../../Components/ComponentsSportsPage/MultiSports";
@@ -12,6 +13,7 @@ export default function SportsPage() {
             <NavBarComponent />
             <SubContainerMain>
                 <HeaderComponent />
+                <SportsNew/>
                 <WeeklyNews/>
                 <MultiNews />
                 <MultiSports />

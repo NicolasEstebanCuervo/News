@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import NavBarComponent from "../../Components/NavBar";
 import Footer from "../../Components/Footer";
 import HeaderComponent from "../../Components/ComponentsPoliticsPage/Header";
+import PoliticNew from "../../Components/ComponentsPoliticsPage/PoliticNew";
 import WeeklyNews from "../../Components/ComponentsPoliticsPage/WeeklyNews";
 import MultiNews from "../../Components/ComponentsPoliticsPage/MultiNews";
 import MultiPolitics from "../../Components/ComponentsPoliticsPage/MultiPolitics";
@@ -12,6 +13,7 @@ export default function PoliticsPage() {
             <NavBarComponent />
             <SubContainerMain>
                 <HeaderComponent />
+                <PoliticNew/>
                 <WeeklyNews/>
                 <MultiNews />
                 <MultiPolitics />
