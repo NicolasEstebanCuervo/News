@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { useNews } from "../../../Context/Context";
+
 export default function PoliticNew() {
     const { newsData } = useNews();
 
