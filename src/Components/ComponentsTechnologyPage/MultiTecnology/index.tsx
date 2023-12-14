@@ -1,58 +1,58 @@
 import styled from "@emotion/styled";
 import { useNews } from "../../../Context/Context";
 
-export default function MultiTecnology() {
+export default function MultiTechnology() {
     const { newsData } = useNews();
 
     if (!newsData || !newsData.items || newsData.items.length === 0) {
         return <div>Cargando...</div>;
     }
 
-    const noticiasPolitics = newsData.items.filter(
-        (noticia) => noticia.category === "tecnology"
+    const noticiasTecnologia = newsData.items.filter(
+        (noticia) => noticia.category === "technology"
     );
 
     const noticiasArray: number[] = [];
 
     while (noticiasArray.length < 3) {
-        const numeroAleatorio = Math.floor(Math.random() * noticiasPolitics.length);
+        const numeroAleatorio = Math.floor(Math.random() * noticiasTecnologia.length);
         if (!noticiasArray.includes(numeroAleatorio)) {
             noticiasArray.push(numeroAleatorio);
         }
     }
     
-    const imagenesFijas = ['TecnologyIcon1.png', 'TecnologyIcon2.png', 'TecnologyIcon3.png'];
+    const imagenesFijas = ['TechnologyIcon1.png', 'TechnologyIcon2.png', 'TechnologyIcon3.png'];
 
     return (
-        <ContainerMultiPolitica>
-            <TitleMultiPolitica>En la capital del país.</TitleMultiPolitica>
-            <SubContainerMultiPolitica>
+        <ContainerMultiNew>
+            <TitleMultiNew>En la capital del país.</TitleMultiNew>
+            <SubContainerMultiNew>
                 {noticiasArray.map((index, i) => (
-                    <CardMultiPolitica key={index}>
-                        <SubContainerCardMultiPolitica>
-                            <IconCardMultiPolitica
+                    <CardMultiNew key={index}>
+                        <SubContainerCardMultiNew>
+                            <IconCardMultiNew
                                 src={require(`../../../Assets/Icons/${imagenesFijas[i]}`)}
-                            ></IconCardMultiPolitica>
-                            <TitleCardMultiPolitica
+                            ></IconCardMultiNew>
+                            <TitleCardMultiNew
                                 onClick={() => {
-                                    window.location.href = `/Tecnology/:${noticiasPolitics[index].id}`;
+                                    window.location.href = `/Technology/:${noticiasTecnologia[index].id}`;
                                 }}
                             >
-                                {noticiasPolitics[index].title}
-                            </TitleCardMultiPolitica>
-                            <DescritionCardMultiPolitica>
-                                {noticiasPolitics[index].description}
-                            </DescritionCardMultiPolitica>
-                        </SubContainerCardMultiPolitica>
-                    </CardMultiPolitica>
+                                {noticiasTecnologia[index].title}
+                            </TitleCardMultiNew>
+                            <DescritionCardMultiNew>
+                                {noticiasTecnologia[index].description}
+                            </DescritionCardMultiNew>
+                        </SubContainerCardMultiNew>
+                    </CardMultiNew>
                 ))}
-            </SubContainerMultiPolitica>
-        </ContainerMultiPolitica>
+            </SubContainerMultiNew>
+        </ContainerMultiNew>
     );
     
 }
 
-const ContainerMultiPolitica = styled.section`
+const ContainerMultiNew = styled.section`
     background: #f2f4f4;
     display: flex;
     flex-direction: column;
@@ -68,7 +68,7 @@ const ContainerMultiPolitica = styled.section`
     }
 `;
 
-const SubContainerMultiPolitica = styled.div`
+const SubContainerMultiNew = styled.div`
     width: 85%;
     display: flex;
     justify-content: center;
@@ -85,7 +85,7 @@ const SubContainerMultiPolitica = styled.div`
     }
 `;
 
-const CardMultiPolitica = styled.div`
+const CardMultiNew = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,7 +93,7 @@ const CardMultiPolitica = styled.div`
     gap: 2vh;
 `;
 
-const TitleMultiPolitica = styled.h1`
+const TitleMultiNew = styled.h1`
     text-align: center;
     font-size: 50px;
     font-weight: bold;
@@ -108,7 +108,7 @@ const TitleMultiPolitica = styled.h1`
     }
 `;
 
-const SubContainerCardMultiPolitica = styled.div`
+const SubContainerCardMultiNew = styled.div`
     display: flex;
     gap: 1vh;
     text-align: center;
@@ -130,7 +130,7 @@ const SubContainerCardMultiPolitica = styled.div`
     }
 `;
 
-const IconCardMultiPolitica = styled.img`
+const IconCardMultiNew = styled.img`
     width: 70px;
     margin: 0 10px;
 
@@ -147,7 +147,7 @@ const IconCardMultiPolitica = styled.img`
     }
 `;
 
-const TitleCardMultiPolitica = styled.h1`
+const TitleCardMultiNew = styled.h1`
     font-weight: bold;
     cursor: pointer;
     font-size: 25px;
@@ -176,7 +176,7 @@ const TitleCardMultiPolitica = styled.h1`
     }
 `;
 
-const DescritionCardMultiPolitica = styled.h2`
+const DescritionCardMultiNew = styled.h2`
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 18px;

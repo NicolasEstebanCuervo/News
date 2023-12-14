@@ -8,19 +8,19 @@ export default function SportsNew() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasEntretenimiento = newsData.items.filter(
+    const noticiasDeportes = newsData.items.filter(
         (noticia) => noticia.category === "sports"
     );
 
-    if (noticiasEntretenimiento.length === 0) {
-        return <div>No hay noticias de entretenimiento disponibles.</div>;
+    if (noticiasDeportes.length === 0) {
+        return <div>No hay noticias de deportes disponibles.</div>;
     }
 
     const numeroAleatorio = Math.floor(
-        Math.random() * noticiasEntretenimiento.length
+        Math.random() * noticiasDeportes.length
     );
 
-    const noticiaSeleccionada = noticiasEntretenimiento[numeroAleatorio];
+    const noticiaSeleccionada = noticiasDeportes[numeroAleatorio];
 
     return (
         <ContainerPoliticaNew>

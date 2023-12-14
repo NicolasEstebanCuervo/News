@@ -8,22 +8,22 @@ export default function MultiNews() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasPolitics = newsData.items.filter(
-        (noticia) => noticia.category === "tecnology"
+    const noticiasTecnologia = newsData.items.filter(
+        (noticia) => noticia.category === "technology"
     );
 
     const noticiasArray: number[] = [];
 
     while (noticiasArray.length < 3) {
         const numeroAleatorio = Math.floor(
-            Math.random() * noticiasPolitics.length
+            Math.random() * noticiasTecnologia.length
         );
         if (!noticiasArray.includes(numeroAleatorio)) {
             noticiasArray.push(numeroAleatorio);
         }
     }
 
-    const imagenesFijas = ["TecnologyImage2.webp","TecnologyImage3.webp","TecnologyImage4.webp"];
+    const imagenesFijas = ["TechnologyImage2","TechnologyImage3","TechnologyImage4"];
 
     return (
         <ContainerMultiNews>
@@ -32,20 +32,20 @@ export default function MultiNews() {
                 {noticiasArray.map((index, i) => (
                     <ContainerIndividualMultiNews>
                         <ImagenMultiNews
-                            src={require(`../../../Assets/Images/${imagenesFijas[i]}`)}
+                            src={require(`../../../Assets/Images/${imagenesFijas[i]}.webp`)}
                         />
                         <TitleIndividualMultiNews
                             onClick={() => {
-                                window.location.href = `/Tecnology/:${noticiasPolitics[index].id}`;
+                                window.location.href = `/Technology/:${noticiasTecnologia[index].id}`;
                             }}
                         >
-                            {noticiasPolitics[index].title}
+                            {noticiasTecnologia[index].title}
                         </TitleIndividualMultiNews>
                         <DescriptionMultiNews>
-                            {noticiasPolitics[index].title}
+                            {noticiasTecnologia[index].title}
                         </DescriptionMultiNews>
                         <ButtonMultiNews
-                            href={`/Politica/:${noticiasPolitics[index].id}`}
+                            href={`/Politica/:${noticiasTecnologia[index].id}`}
                         >
                             Read More{" "}
                         </ButtonMultiNews>

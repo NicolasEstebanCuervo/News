@@ -8,25 +8,25 @@ export default function WeeklyNews() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasPolitica = newsData.items.filter(
-        (noticia) => noticia.category === "tecnology"
+    const noticiasTecnologia = newsData.items.filter(
+        (noticia) => noticia.category === "technology"
     );
 
-    if (noticiasPolitica.length === 0) {
-        return <div>No hay noticias de entretenimiento disponibles.</div>;
+    if (noticiasTecnologia.length === 0) {
+        return <div>No hay noticias de tecnologia disponibles.</div>;
     }
 
     return (
         <WeeklyNewsContainer>
             <WeeklyNewsTitle>Weekly News</WeeklyNewsTitle>
-            {noticiasPolitica.slice(0, 1).map((noticia, index) => (
+            {noticiasTecnologia.slice(0, 1).map((noticia, index) => (
                 <WeeklyNewsItem key={index}>
                     <NewsImage
-                        src={require("../../../Assets/Images/TecnologyImage5.webp")}
+                        src={require("../../../Assets/Images/TechnologyImage5.webp")}
                         alt={noticia.title}
                     />
                     <NewsInfoContainer>
-                        <NewsTitle href={`/Tecnology/:${noticia.id}`}>{noticia.title}</NewsTitle>
+                        <NewsTitle href={`/Technology/:${noticia.id}`}>{noticia.title}</NewsTitle>
                         <NewsParagraph>
                             Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit. Aliquam sed ipsa enim aut ea. Amet quae

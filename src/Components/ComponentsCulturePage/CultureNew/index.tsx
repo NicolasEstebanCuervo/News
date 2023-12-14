@@ -8,19 +8,19 @@ export default function CultureNew() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasEntretenimiento = newsData.items.filter(
+    const noticiasCultura = newsData.items.filter(
         (noticia) => noticia.category === "culture"
     );
 
-    if (noticiasEntretenimiento.length === 0) {
-        return <div>No hay noticias de entretenimiento disponibles.</div>;
+    if (noticiasCultura.length === 0) {
+        return <div>No hay noticias de cultura disponibles.</div>;
     }
 
     const numeroAleatorio = Math.floor(
-        Math.random() * noticiasEntretenimiento.length
+        Math.random() * noticiasCultura.length
     );
 
-    const noticiaSeleccionada = noticiasEntretenimiento[numeroAleatorio];
+    const noticiaSeleccionada = noticiasCultura[numeroAleatorio];
 
     return (
         <ContainerPoliticaNew>

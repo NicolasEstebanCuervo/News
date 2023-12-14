@@ -8,18 +8,18 @@ export default function WeeklyNews() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasPolitica = newsData.items.filter(
+    const noticiasDeportes = newsData.items.filter(
         (noticia) => noticia.category === "sports"
     );
 
-    if (noticiasPolitica.length === 0) {
-        return <div>No hay noticias de entretenimiento disponibles.</div>;
+    if (noticiasDeportes.length === 0) {
+        return <div>No hay noticias de deportes disponibles.</div>;
     }
 
     return (
         <WeeklyNewsContainer>
             <WeeklyNewsTitle>Weekly News</WeeklyNewsTitle>
-            {noticiasPolitica.slice(0, 1).map((noticia, index) => (
+            {noticiasDeportes.slice(0, 1).map((noticia, index) => (
                 <WeeklyNewsItem key={index}>
                     <NewsImage
                         src={require("../../../Assets/Images/SportsImage3.webp")}

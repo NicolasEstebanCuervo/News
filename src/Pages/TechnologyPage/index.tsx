@@ -1,24 +1,24 @@
 import styled from "@emotion/styled";
 import NavBarComponent from "../../Components/NavBar";
 import Footer from "../../Components/Footer";
-import HeaderComponent from "../../Components/ComponentsTecnologyPage/Header";
-import TecnologyNew from "../../Components/ComponentsTecnologyPage/TecnologyNew";
-import WeeklyNews from "../../Components/ComponentsTecnologyPage/WeeklyNews";
-import MultiNews from "../../Components/ComponentsTecnologyPage/MultiNews";
-import MultiTecnology from "../../Components/ComponentsTecnologyPage/MultiTecnology";
+import HeaderComponent from "../../Components/ComponentsTechnologyPage/Header";
+import TechnologyNew from "../../Components/ComponentsTechnologyPage/TechnologyNew";
+import WeeklyNews from "../../Components/ComponentsTechnologyPage/WeeklyNews";
+import MultiNews from "../../Components/ComponentsTechnologyPage/MultiNews";
+import MultiTecnology from "../../Components/ComponentsTechnologyPage/MultiTecnology";
 
-export default function     TecnologyPage() {
+export default function TechnologyPage() {
     return (
         <ContainerMain>
             <NavBarComponent />
             <SubContainerMain>
                 <HeaderComponent />
-                <TecnologyNew/>
-                <WeeklyNews/>
+                <TechnologyNew />
+                <WeeklyNews />
                 <MultiNews />
                 <MultiTecnology />
             </SubContainerMain>
-            <Footer/>
+            <Footer />
         </ContainerMain>
     );
 }

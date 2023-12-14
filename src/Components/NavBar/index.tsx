@@ -26,7 +26,7 @@ export default function NavBarComponent() {
                         <NavLink href="/Politics">Politics</NavLink>
                         <NavLink href="/Economy">Economy</NavLink>
                         <CustomNavDropdown title="Categorías" id="basic-nav-dropdown">
-                            <NavDropdownItem href="/Tecnology">Tecnology</NavDropdownItem>
+                            <NavDropdownItem href="/Technology">Technology</NavDropdownItem>
                             <NavDropdownItem href="/Science">Science</NavDropdownItem>
                             <NavDropdownItem href="/Entertainment">Entertainment</NavDropdownItem>
                             <NavDropdownItem href="/Culture">Culture</NavDropdownItem>

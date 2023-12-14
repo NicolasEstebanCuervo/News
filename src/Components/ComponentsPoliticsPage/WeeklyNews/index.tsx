@@ -13,7 +13,7 @@ export default function WeeklyNews() {
     );
 
     if (noticiasPolitica.length === 0) {
-        return <div>No hay noticias de entretenimiento disponibles.</div>;
+        return <div>No hay noticias de politica disponibles.</div>;
     }
 
     return (

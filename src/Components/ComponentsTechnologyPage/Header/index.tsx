@@ -8,24 +8,24 @@ export default function HeaderComponent() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasEntretenimiento = newsData.items.filter(
-        (noticia) => noticia.category === "tecnology"
+    const noticiasTecnologia = newsData.items.filter(
+        (noticia) => noticia.category === "technology"
     );
 
-    if (noticiasEntretenimiento.length === 0) {
-        return <div>No hay noticias de entretenimiento disponibles.</div>;
+    if (noticiasTecnologia.length === 0) {
+        return <div>No hay noticias de tecnologia disponibles.</div>;
     }
 
     const numeroAleatorio = Math.floor(
-        Math.random() * noticiasEntretenimiento.length
+        Math.random() * noticiasTecnologia.length
     );
 
-    const noticiaSeleccionada = noticiasEntretenimiento[numeroAleatorio];
+    const noticiaSeleccionada = noticiasTecnologia[numeroAleatorio];
 
     return (
         <ContainerMain>
             <ContainerImage
-                src={require("../../../Assets/Images/TecnologyImage6.webp")}
+                src={require("../../../Assets/Images/TechnologyImage6.webp")}
             ></ContainerImage>
 
             {noticiaSeleccionada && (

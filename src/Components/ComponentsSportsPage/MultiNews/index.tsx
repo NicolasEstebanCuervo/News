@@ -8,7 +8,7 @@ export default function MultiNews() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasPolitics = newsData.items.filter(
+    const noticiasDeportes = newsData.items.filter(
         (noticia) => noticia.category === "sports"
     );
 
@@ -16,7 +16,7 @@ export default function MultiNews() {
 
     while (noticiasArray.length < 3) {
         const numeroAleatorio = Math.floor(
-            Math.random() * noticiasPolitics.length
+            Math.random() * noticiasDeportes.length
         );
         if (!noticiasArray.includes(numeroAleatorio)) {
             noticiasArray.push(numeroAleatorio);
@@ -36,16 +36,16 @@ export default function MultiNews() {
                         />
                         <TitleIndividualMultiNews
                             onClick={() => {
-                                window.location.href = `/Sports/:${noticiasPolitics[index].id}`;
+                                window.location.href = `/Sports/:${noticiasDeportes[index].id}`;
                             }}
                         >
-                            {noticiasPolitics[index].title}
+                            {noticiasDeportes[index].title}
                         </TitleIndividualMultiNews>
                         <DescriptionMultiNews>
-                            {noticiasPolitics[index].title}
+                            {noticiasDeportes[index].title}
                         </DescriptionMultiNews>
                         <ButtonMultiNews
-                            href={`/Politica/:${noticiasPolitics[index].id}`}
+                            href={`/Politica/:${noticiasDeportes[index].id}`}
                         >
                             Read More{" "}
                         </ButtonMultiNews>

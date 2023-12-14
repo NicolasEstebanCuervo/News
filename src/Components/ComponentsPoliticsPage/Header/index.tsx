@@ -8,19 +8,19 @@ export default function HeaderComponent() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasEntretenimiento = newsData.items.filter(
+    const noticiasPolitica = newsData.items.filter(
         (noticia) => noticia.category === "politics"
     );
 
-    if (noticiasEntretenimiento.length === 0) {
-        return <div>No hay noticias de entretenimiento disponibles.</div>;
+    if (noticiasPolitica.length === 0) {
+        return <div>No hay noticias de politica disponibles.</div>;
     }
 
     const numeroAleatorio = Math.floor(
-        Math.random() * noticiasEntretenimiento.length
+        Math.random() * noticiasPolitica.length
     );
 
-    const noticiaSeleccionada = noticiasEntretenimiento[numeroAleatorio];
+    const noticiaSeleccionada = noticiasPolitica[numeroAleatorio];
 
     return (
         <ContainerMain>

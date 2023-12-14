@@ -62,7 +62,7 @@ const data = {
         {
             id: 9,
             title: "Empresa de Tecnología Anuncia Avances Significativos en Inteligencia Artificial",
-            category: "tecnology",
+            category: "technology",
             description:
                 "Empresa de tecnología anuncia avances significativos en inteligencia artificial para mejorar la eficiencia de los procesos empresariales.",
         },
@@ -76,7 +76,7 @@ const data = {
         {
             id: 11,
             title: "Presentación de Dispositivo Revolucionario",
-            category: "tecnology",
+            category: "technology",
             description:
                 "Una empresa líder en tecnología presenta un dispositivo revolucionario que cambiará la forma en que interactuamos con la tecnología.",
         },
@@ -90,7 +90,7 @@ const data = {
         {
             id: 13,
             title: "Startup Anuncia Aplicación Innovadora",
-            category: "tecnology",
+            category: "technology",
             description:
                 "Startup tecnológica anuncia una aplicación innovadora para facilitar la vida cotidiana de los usuarios.",
         },
@@ -132,7 +132,7 @@ const data = {
         {
             id: 19,
             title: "Presentación de Dispositivo Revolucionario de Realidad Virtual",
-            category: "tecnology",
+            category: "technology",
             description:
                 "Compañía líder en tecnología presenta un dispositivo revolucionario que cambiará la forma en que interactuamos con la realidad virtual.",
         },
@@ -160,7 +160,7 @@ const data = {
         {
             id: 23,
             title: "Empresa de Inteligencia Artificial Revela Avances Sorprendentes",
-            category: "tecnology",
+            category: "technology",
             description:
                 "Empresa de inteligencia artificial revela avances sorprendentes en la creación de asistentes virtuales más inteligentes.",
         },
@@ -202,7 +202,7 @@ const data = {
         {
             id: 29,
             title: "Lanzamiento Exitoso de Satélite de Próxima Generación",
-            category: "tecnology",
+            category: "technology",
             description:
                 "Lanzamiento exitoso de un satélite de próxima generación marca un hito en la exploración espacial.",
         },
@@ -230,7 +230,7 @@ const data = {
         {
             id: 33,
             title: "Creación de Asistentes Virtuales más Inteligentes",
-            category: "tecnology",
+            category: "technology",
             description:
                 "Empresa de inteligencia artificial revela avances sorprendentes en la creación de asistentes virtuales más inteligentes.",
         },
@@ -272,7 +272,7 @@ const data = {
         {
             id: 39,
             title: "Éxito en el Lanzamiento de un Satélite de Próxima Generación",
-            category: "tecnology",
+            category: "technology",
             description:
                 "Lanzamiento exitoso de un satélite de próxima generación marca un hito en la exploración espacial.",
         },
@@ -300,7 +300,7 @@ const data = {
         {
             id: 43,
             title: "Avances en Robótica que Cambiarán la Industria",
-            category: "tecnology",
+            category: "technology",
             description:
                 "Innovaciones en robótica prometen transformar la industria con avances significativos en la automatización y la eficiencia.",
         },
@@ -342,7 +342,7 @@ const data = {
         {
             id: 49,
             title: "Nuevas Tecnologías Impulsan la Exploración del Cosmos",
-            category: "tecnology",
+            category: "technology",
             description:
                 "Innovaciones en tecnologías espaciales abren nuevas posibilidades para la exploración del cosmos, marcando el comienzo de una nueva era en la carrera espacial.",
         },
@@ -370,7 +370,7 @@ const data = {
         {
             id: 53,
             title: "Empresas Lideran el Camino con Nuevas Soluciones Digitales",
-            category: "tecnology",
+            category: "technology",
             description:
                 "Empresas líderes en innovación tecnológica lanzan nuevas soluciones digitales que prometen transformar la forma en que vivimos y trabajamos.",
         },
@@ -412,7 +412,7 @@ const data = {
         {
             id: 59,
             title: "Nueva Generación de Dispositivos Revoluciona la Vida Cotidiana",
-            category: "tecnology",
+            category: "technology",
             description:
                 "La llegada de una nueva generación de dispositivos tecnológicos promete revolucionar la forma en que vivimos nuestras vidas diarias, desde el hogar hasta el trabajo.",
         },
@@ -440,7 +440,7 @@ const data = {
         {
             id: 63,
             title: "Nuevos Androides Transforman la Industria Manufacturera",
-            category: "tecnology",
+            category: "technology",
             description:
                 "Los últimos avances en robótica introducen androides altamente avanzados que están transformando la industria manufacturera con eficiencia y precisión mejoradas.",
         },
@@ -482,7 +482,7 @@ const data = {
         {
             id: 69,
             title: "Innovación Espacial: Satélites Avanzados Abren Nuevas Posibilidades en la Observación de la Tierra",
-            category: "tecnology",
+            category: "technology",
             description:
                 "El lanzamiento de satélites avanzados abre nuevas posibilidades en la observación de la Tierra, facilitando la monitorización de cambios medioambientales y fenómenos naturales.",
         },
@@ -510,7 +510,7 @@ const data = {
         {
             id: 73,
             title: "Empresas Lideran la Revolución con Soluciones Innovadoras",
-            category: "tecnology",
+            category: "technology",
             description:
                 "Empresas líderes impulsan la revolución tecnológica con soluciones innovadoras que están cambiando la forma en que vivimos, trabajamos y nos comunicamos.",
         },
@@ -552,7 +552,7 @@ const data = {
         {
             id: 79,
             title: " Empresas Adoptan la Inteligencia Artificial para Impulsar la Eficiencia",
-            category: "tecnology",
+            category: "technology",
             description:
                 "Empresas en todo el mundo adoptan la inteligencia artificial para impulsar la eficiencia operativa, marcando una transformación significativa en la forma en que hacen negocios.",
         },
@@ -580,7 +580,7 @@ const data = {
         {
             id: 83,
             title: " Avances Revolucionarios para el Diagnóstico y Tratamiento",
-            category: "tecnology",
+            category: "technology",
             description:
                 "La aplicación de inteligencia artificial en la medicina alcanza nuevos hitos, con avances revolucionarios que mejoran el diagnóstico y tratamiento de enfermedades.",
         },
@@ -622,7 +622,7 @@ const data = {
         {
             id: 89,
             title: "Rover Robótico Enviado a Investigar Superficie de un Planeta Lejano",
-            category: "tecnology",
+            category: "technology",
             description:
                 "Una misión espacial envía un rover robótico para explorar la superficie de un planeta lejano, recopilando datos cruciales para la investigación astronómica.",
         },
@@ -650,7 +650,7 @@ const data = {
         {
             id: 93,
             title: "Desarrollo de Dispositivos de Realidad Aumentada",
-            category: "tecnology",
+            category: "technology",
             description:
                 "Investigadores trabajan en el desarrollo de dispositivos de realidad aumentada que prometen cambiar la forma en que interactuamos con el mundo digital y físico.",
         },
@@ -692,7 +692,7 @@ const data = {
         {
             id: 99,
             title: "Empresas Lanzan Dispositivos Revolucionarios para la Vida Cotidiana",
-            category: "tecnology",
+            category: "technology",
             description:
                 "Empresas líderes lanzan dispositivos tecnológicos revolucionarios que prometen simplificar y mejorar la vida cotidiana de las personas en todo el mundo.",
         },

@@ -9,7 +9,7 @@ export default function CardsNews() {
     }
 
     const noticiasTecnologia = newsData.items.filter(
-        (noticia) => noticia.category === "tecnology"
+        (noticia) => noticia.category === "technology"
     );
 
     if (noticiasTecnologia.length === 0) {
@@ -18,7 +18,7 @@ export default function CardsNews() {
 
     const noticiasLimitadas = noticiasTecnologia.slice(0, 4);
 
-    const imagenesFijas = ["TecnologyImage1.webp", "TecnologyImage2.webp", "TecnologyImage3.webp", "TecnologyImage4.webp"];
+    const imagenesFijas = ["TechnologyImage1", "TechnologyImage2", "TechnologyImage3", "TechnologyImage4"];
 
     return (
         <ContainerCardsNews>
@@ -28,7 +28,7 @@ export default function CardsNews() {
                     <ContainerCardIndividual key={item}>
                         <ContainerImage
                             src={
-                                require(`../../../Assets/Images/${imagenesFijas[item]}`)
+                                require(`../../../Assets/Images/${imagenesFijas[item]}.webp`)
                             } 
                             alt={`Imagen ${item + 1}`}
                         />
@@ -36,7 +36,7 @@ export default function CardsNews() {
                             <NumberNew>{item + 1}</NumberNew>
                             <TitleNew
                                 onClick={() => {
-                                    window.location.href = `/Tecnology/:${noticia.id}`;
+                                    window.location.href = `/Technology/:${noticia.id}`;
                                 }}
                             >
                                 {noticia.title}
