@@ -12,8 +12,6 @@ export default function TechnologyNew() {
         (noticia) => noticia.category === "technology"
     );
 
-numRandom
-
     const numRandom = Math.floor(
         Math.random() * fncNewsTechnology.length
     );

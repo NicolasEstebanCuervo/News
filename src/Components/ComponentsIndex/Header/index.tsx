@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { NewsItem, useNews } from "../../../Context/Context";
+import { useNews } from "../../../Context/Context";
 
 export default function HeaderComponent() {
     const { newsData } = useNews();
@@ -36,7 +36,7 @@ export default function HeaderComponent() {
                             {newSelected.description}
                         </DescriptionHeader>
                         <ButtonHeader
-                            href={`/Entretenimiento/:${newSelected.id}`}
+                            href={`/Politics/:${newSelected.id}`}
                         >
                             Read More
                         </ButtonHeader>

@@ -12,8 +12,6 @@ export default function WeeklyNews() {
         (noticia) => noticia.category === "technology"
     );
 
-numRandom
-
     return (
         <WeeklyNewsContainer>
             <WeeklyNewsTitle>Weekly News</WeeklyNewsTitle>

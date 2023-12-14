@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { NewsItem, useNews } from "../../../Context/Context";
+import { useNews } from "../../../Context/Context";
 
 export default function HeaderComponent() {
     const { newsData } = useNews();
@@ -11,8 +11,6 @@ export default function HeaderComponent() {
     const fncNewsEconomy = newsData.items.filter(
         (noticia) => noticia.category === "economy"
     );
-
-
 
     const numRandom = Math.floor(
         Math.random() * fncNewsEconomy.length
@@ -29,7 +27,7 @@ export default function HeaderComponent() {
             {newSelected && (
                 <ContainerTexts key={newSelected.id}>
                     <ContainerTitleHeader>
-                        <TitleTextHeader>
+                        <TitleTextHeader href={`/Economy/:${newSelected.id}`}>
                             {newSelected.title}
                         </TitleTextHeader>
                     </ContainerTitleHeader>
@@ -90,7 +88,9 @@ const ContainerTitleHeader = styled.div`
     }
 `;
 
-const TitleTextHeader = styled.h1`
+const TitleTextHeader = styled.a`
+    text-decoration-line: none;
+    color: #000;
     font-size: 30px;
     font-weight: 800;
     overflow: hidden;

@@ -20,14 +20,14 @@ export default function MultiNews() {
         (noticia) => noticia.category === "science"
     );
 
-    const noticiasLimitadasCulture = newCulture.slice(0, 1);
-    const noticiasLimitadasSports = newSports.slice(0, 1);
-    const noticiasLimitadasScience = newScience.slice(0, 1);
+    const newsLimitedCulture = newCulture.slice(0, 1);
+    const newsLimitedSports = newSports.slice(0, 1);
+    const newsLimitedScience = newScience.slice(0, 1);
 
     return (
         <ContainerMultiNews>
             <SubContainerMultiNews>
-                {noticiasLimitadasCulture.map((item) => (
+                {newsLimitedCulture.map((item) => (
                     <CardMultiNews>
                         <TitleCard>Cultura</TitleCard>
                         <SubContainerCardMultiNews>
@@ -43,7 +43,7 @@ export default function MultiNews() {
                         </SubContainerCardMultiNews>
                     </CardMultiNews>
                 ))}
-                {noticiasLimitadasSports.map((item) => (
+                {newsLimitedSports.map((item) => (
                     <CardMultiNews>
                         <TitleCard>Deportes</TitleCard>
                         <SubContainerCardMultiNews>
@@ -59,7 +59,7 @@ export default function MultiNews() {
                         </SubContainerCardMultiNews>
                     </CardMultiNews>
                 ))}{" "}
-                {noticiasLimitadasScience.map((item) => (
+                {newsLimitedScience.map((item) => (
                     <CardMultiNews>
                         <TitleCard>Ciencia</TitleCard>
                         <SubContainerCardMultiNews>

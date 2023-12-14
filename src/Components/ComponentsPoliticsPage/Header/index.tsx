@@ -29,7 +29,7 @@ export default function HeaderComponent() {
             {newSelected && (
                 <ContainerTexts key={newSelected.id}>
                     <ContainerTitleHeader>
-                        <TitleTextHeader>
+                        <TitleTextHeader href={`/Politics/:${newSelected.id}`}>
                             {newSelected.title}
                         </TitleTextHeader>
                     </ContainerTitleHeader>
@@ -90,8 +90,10 @@ const ContainerTitleHeader = styled.div`
     }
 `;
 
-const TitleTextHeader = styled.h1`
+const TitleTextHeader = styled.a`
     font-size: 30px;
+    text-decoration-line: none;
+    color: #000;
     font-weight: 800;
     overflow: hidden;
     text-overflow: ellipsis;

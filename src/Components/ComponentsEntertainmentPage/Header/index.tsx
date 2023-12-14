@@ -12,11 +12,7 @@ export default function HeaderComponent() {
         (noticia) => noticia.category === "entertainment"
     );
 
-
-
-    const numRandom = Math.floor(
-        Math.random() * fncNewsEntertainment.length
-    );
+    const numRandom = Math.floor(Math.random() * fncNewsEntertainment.length);
 
     const newSelected = fncNewsEntertainment[numRandom];
 
@@ -29,7 +25,9 @@ export default function HeaderComponent() {
             {newSelected && (
                 <ContainerTexts key={newSelected.id}>
                     <ContainerTitleHeader>
-                        <TitleTextHeader>
+                        <TitleTextHeader
+                            href={`/Entertainment/:${newSelected.id}`}
+                        >
                             {newSelected.title}
                         </TitleTextHeader>
                     </ContainerTitleHeader>
@@ -90,7 +88,9 @@ const ContainerTitleHeader = styled.div`
     }
 `;
 
-const TitleTextHeader = styled.h1`
+const TitleTextHeader = styled.a`
+    text-decoration-line: none;
+    color: #000;
     font-size: 30px;
     font-weight: 800;
     overflow: hidden;
