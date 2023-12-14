@@ -8,40 +8,40 @@ export default function MultiPolitics() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasPolitica = newsData.items.filter(
+    const fncNewsPolitics = newsData.items.filter(
         (noticia) => noticia.category === "politics"
     );
 
-    const noticiasArray: number[] = [];
+    const newArray: number[] = [];
 
-    while (noticiasArray.length < 3) {
-        const numeroAleatorio = Math.floor(Math.random() * noticiasPolitica.length);
-        if (!noticiasArray.includes(numeroAleatorio)) {
-            noticiasArray.push(numeroAleatorio);
+    while (newArray.length < 3) {
+        const numRandom = Math.floor(Math.random() * fncNewsPolitics.length);
+        if (!newArray.includes(numRandom)) {
+            newArray.push(numRandom);
         }
     }
     
-    const imagenesFijas = ['PoliticsIcon1.png', 'PoliticsIcon2.png', 'PoliticsIcon3.png'];
+    const imagesArray = ['PoliticsIcon1.png', 'PoliticsIcon2.png', 'PoliticsIcon3.png'];
     
     return (
         <ContainerMultiNew>
             <TitleMultiNew>En la capital del país.</TitleMultiNew>
             <SubContainerMultiNew>
-                {noticiasArray.map((index, i) => (
+                {newArray.map((index, i) => (
                     <CardMultiNew key={index}>
                         <SubContainerCardMultiNew>
                             <IconCardMultiNew
-                                src={require(`../../../Assets/Icons/${imagenesFijas[i]}`)}
+                                src={require(`../../../Assets/Icons/${imagesArray[i]}`)}
                             ></IconCardMultiNew>
                             <TitleCardMultiNew
                                 onClick={() => {
-                                    window.location.href = `/Politics/:${noticiasPolitica[index].id}`;
+                                    window.location.href = `/Politics/:${fncNewsPolitics[index].id}`;
                                 }}
                             >
-                                {noticiasPolitica[index].title}
+                                {fncNewsPolitics[index].title}
                             </TitleCardMultiNew>
                             <DescritionCardMultiNew>
-                                {noticiasPolitica[index].description}
+                                {fncNewsPolitics[index].description}
                             </DescritionCardMultiNew>
                         </SubContainerCardMultiNew>
                     </CardMultiNew>

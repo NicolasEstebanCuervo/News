@@ -8,19 +8,17 @@ export default function HeaderComponent() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasCultura = newsData.items.filter(
+    const fncNewsCulture = newsData.items.filter(
         (noticia) => noticia.category === "culture"
     );
 
-    if (noticiasCultura.length === 0) {
-        return <div>No hay noticias de cultura disponibles.</div>;
-    }
 
-    const numeroAleatorio = Math.floor(
-        Math.random() * noticiasCultura.length
+
+    const numRandom = Math.floor(
+        Math.random() * fncNewsCulture.length
     );
 
-    const noticiaSeleccionada = noticiasCultura[numeroAleatorio];
+    const newSelected = fncNewsCulture[numRandom];
 
     return (
         <ContainerMain>
@@ -28,16 +26,16 @@ export default function HeaderComponent() {
                 src={require("../../../Assets/Images/CultureImage5.webp")}
             ></ContainerImage>
 
-            {noticiaSeleccionada && (
-                <ContainerTexts key={noticiaSeleccionada.id}>
+            {newSelected && (
+                <ContainerTexts key={newSelected.id}>
                     <ContainerTitleHeader>
                         <TitleTextHeader>
-                            {noticiaSeleccionada.title}
+                            {newSelected.title}
                         </TitleTextHeader>
                     </ContainerTitleHeader>
                     <ContainerTextsDescription>
                         <DescriptionHeader>
-                            {noticiaSeleccionada.description}
+                            {newSelected.description}
                         </DescriptionHeader>
                     </ContainerTextsDescription>
                 </ContainerTexts>

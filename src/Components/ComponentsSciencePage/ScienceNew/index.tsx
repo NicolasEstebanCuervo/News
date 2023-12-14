@@ -7,28 +7,26 @@ export default function ScienceNew() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasCiencia = newsData.items.filter(
+    const fncNewsScience = newsData.items.filter(
         (noticia) => noticia.category === "science"
     );
 
-    if (noticiasCiencia.length === 0) {
-        return <div>No hay noticias de ciencia disponibles.</div>;
-    }
 
-    const numeroAleatorio = Math.floor(
-        Math.random() * noticiasCiencia.length
+
+    const numRandom = Math.floor(
+        Math.random() * fncNewsScience.length
     );
 
-    const noticiaSeleccionada = noticiasCiencia[numeroAleatorio];
+    const newSelected = fncNewsScience[numRandom];
 
     return (
-        <ContainerPoliticaNew>
-            {noticiaSeleccionada && (
-                <TitlePoliticaNews href={`/Science/:${noticiaSeleccionada.id}`}>
-                    {noticiaSeleccionada.title}
-                </TitlePoliticaNews>
+        <ContainerNew>
+            {newSelected && (
+                <TitleNew href={`/Science/:${newSelected.id}`}>
+                    {newSelected.title}
+                </TitleNew>
             )}
-            <SubContainerPoliticaNew>
+            <SubContainerNew>
                 <TextContainer>
                     <Text>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -97,12 +95,12 @@ export default function ScienceNew() {
                         lectus.
                     </Text>
                 </TextContainer>
-            </SubContainerPoliticaNew>
-        </ContainerPoliticaNew>
+            </SubContainerNew>
+        </ContainerNew>
     );
 }
 
-const ContainerPoliticaNew = styled.section`
+const ContainerNew = styled.section`
     display: flex;
     gap: 5vh;
     flex-direction: column;
@@ -111,7 +109,7 @@ const ContainerPoliticaNew = styled.section`
     font-family: "Noto Serif", serif;
 `;
 
-const TitlePoliticaNews = styled.a`
+const TitleNew = styled.a`
     width: 70%;
     text-align: center;
     font-size: 50px;
@@ -130,7 +128,7 @@ const TitlePoliticaNews = styled.a`
     }
 `;
 
-const SubContainerPoliticaNew = styled.div`
+const SubContainerNew = styled.div`
     display: flex;
     justify-content: space-between;
     width: 70%;

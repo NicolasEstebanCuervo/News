@@ -8,31 +8,27 @@ export default function EconomyPage() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasEconomia = newsData.items.filter(
+    const fncNewsEconomy = newsData.items.filter(
         (noticia) => noticia.category === "economy"
     );
 
-    if (noticiasEconomia.length === 0) {
-        return <div>No hay noticias de economia disponibles.</div>;
-    }
-
-    const numeroAleatorio = Math.floor(
-        Math.random() * noticiasEconomia.length
+    const numRandom = Math.floor(
+        Math.random() * fncNewsEconomy.length
     );
 
-    const noticiaSeleccionada = noticiasEconomia[numeroAleatorio];
+    const newSelected = fncNewsEconomy[numRandom];
 
     return (
         <EconomySection>
             <SubContainerEconomy>
-                {noticiaSeleccionada && (
+                {newSelected && (
                     <TextContainer>
-                        <TitleEconomy>{noticiaSeleccionada.title}</TitleEconomy>
+                        <TitleEconomy>{newSelected.title}</TitleEconomy>
                         <DescriptionEconomy>
-                            {noticiaSeleccionada.description}
+                            {newSelected.description}
                         </DescriptionEconomy>
                         <LearnMoreButton
-                            href={`/Economy/:${noticiaSeleccionada.id}`}
+                            href={`/Economy/:${newSelected.id}`}
                         >
                             Learn More About
                         </LearnMoreButton>

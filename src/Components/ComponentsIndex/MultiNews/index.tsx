@@ -8,21 +8,21 @@ export default function MultiNews() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasCulture = newsData.items.filter(
+    const newCulture = newsData.items.filter(
         (noticia) => noticia.category === "culture"
     );
 
-    const noticiasSports = newsData.items.filter(
+    const newSports = newsData.items.filter(
         (noticia) => noticia.category === "sports"
     );
 
-    const noticiasScience = newsData.items.filter(
+    const newScience = newsData.items.filter(
         (noticia) => noticia.category === "science"
     );
 
-    const noticiasLimitadasCulture = noticiasCulture.slice(0, 1);
-    const noticiasLimitadasSports = noticiasSports.slice(0, 1);
-    const noticiasLimitadasScience = noticiasScience.slice(0, 1);
+    const noticiasLimitadasCulture = newCulture.slice(0, 1);
+    const noticiasLimitadasSports = newSports.slice(0, 1);
+    const noticiasLimitadasScience = newScience.slice(0, 1);
 
     return (
         <ContainerMultiNews>

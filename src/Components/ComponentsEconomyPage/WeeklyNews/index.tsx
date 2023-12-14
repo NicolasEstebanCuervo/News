@@ -8,18 +8,16 @@ export default function WeeklyNews() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasEconomia = newsData.items.filter(
+    const fncNewsEconomy = newsData.items.filter(
         (noticia) => noticia.category === "economy"
     );
 
-    if (noticiasEconomia.length === 0) {
-        return <div>No hay noticias de economia disponibles.</div>;
-    }
+
 
     return (
         <WeeklyNewsContainer>
             <WeeklyNewsTitle>Weekly News</WeeklyNewsTitle>
-            {noticiasEconomia.slice(0, 1).map((noticia, index) => (
+            {fncNewsEconomy.slice(0, 1).map((noticia, index) => (
                 <WeeklyNewsItem key={index}>
                     <NewsImage
                         src={require("../../../Assets/Images/EconomyImage2.webp")}

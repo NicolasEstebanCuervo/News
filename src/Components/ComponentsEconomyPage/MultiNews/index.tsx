@@ -8,44 +8,44 @@ export default function MultiNews() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasEconomia = newsData.items.filter(
+    const fncNewsEconomy = newsData.items.filter(
         (noticia) => noticia.category === "economy"
     );
 
-    const noticiasArray: number[] = [];
+    const newArray: number[] = [];
 
-    while (noticiasArray.length < 3) {
-        const numeroAleatorio = Math.floor(
-            Math.random() * noticiasEconomia.length
+    while (newArray.length < 3) {
+        const numRandom = Math.floor(
+            Math.random() * fncNewsEconomy.length
         );
-        if (!noticiasArray.includes(numeroAleatorio)) {
-            noticiasArray.push(numeroAleatorio);
+        if (!newArray.includes(numRandom)) {
+            newArray.push(numRandom);
         }
     }
 
-    const imagenesFijas = ["EconomyImage5.webp","EconomyImage4.webp","EconomyImage6.webp"];
+    const imagesArray = ["EconomyImage5.webp","EconomyImage4.webp","EconomyImage6.webp"];
 
     return (
         <ContainerMultiNews>
             <TitleMultiNews>Latest news in the capital</TitleMultiNews>
             <SubContainerMultiNews>
-                {noticiasArray.map((index, i) => (
+                {newArray.map((index, i) => (
                     <ContainerIndividualMultiNews>
                         <ImagenMultiNews
-                            src={require(`../../../Assets/Images/${imagenesFijas[i]}`)}
+                            src={require(`../../../Assets/Images/${imagesArray[i]}`)}
                         />
                         <TitleIndividualMultiNews
                             onClick={() => {
-                                window.location.href = `/Economy/:${noticiasEconomia[index].id}`;
+                                window.location.href = `/Economy/:${fncNewsEconomy[index].id}`;
                             }}
                         >
-                            {noticiasEconomia[index].title}
+                            {fncNewsEconomy[index].title}
                         </TitleIndividualMultiNews>
                         <DescriptionMultiNews>
-                            {noticiasEconomia[index].title}
+                            {fncNewsEconomy[index].title}
                         </DescriptionMultiNews>
                         <ButtonMultiNews
-                            href={`/Politica/:${noticiasEconomia[index].id}`}
+                            href={`/Politica/:${fncNewsEconomy[index].id}`}
                         >
                             Read More{" "}
                         </ButtonMultiNews>

@@ -8,19 +8,15 @@ export default function HeaderComponent() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasPolitica = newsData.items.filter(
+    const fncNewsPolitics = newsData.items.filter(
         (noticia) => noticia.category === "politics"
     );
 
-    if (noticiasPolitica.length === 0) {
-        return <div>No hay noticias de politica disponibles.</div>;
-    }
-
-    const numeroAleatorio = Math.floor(
-        Math.random() * noticiasPolitica.length
+    const numRandom = Math.floor(
+        Math.random() * fncNewsPolitics.length
     );
 
-    const noticiaSeleccionada = noticiasPolitica[numeroAleatorio];
+    const newSelected = fncNewsPolitics[numRandom];
 
     return (
         <ContainerMain>
@@ -28,19 +24,19 @@ export default function HeaderComponent() {
                 src={require("../../../Assets/Images/PoliticsImage1.webp")}
             ></ContainerImage>
 
-            {noticiaSeleccionada && (
-                <ContainerTexts key={noticiaSeleccionada.id}>
+            {newSelected && (
+                <ContainerTexts key={newSelected.id}>
                     <ContainerTitleHeader>
                         <TitleTextHeader>
-                            {noticiaSeleccionada.title}
+                            {newSelected.title}
                         </TitleTextHeader>
                     </ContainerTitleHeader>
                     <ContainerTextsDescription>
                         <DescriptionHeader>
-                            {noticiaSeleccionada.description}
+                            {newSelected.description}
                         </DescriptionHeader>
                         <ButtonHeader
-                            href={`/Entretenimiento/:${noticiaSeleccionada.id}`}
+                            href={`/Entretenimiento/:${newSelected.id}`}
                         >
                             Read More
                         </ButtonHeader>

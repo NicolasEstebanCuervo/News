@@ -8,40 +8,40 @@ export default function MultiEconomy() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasEconomia = newsData.items.filter(
+    const fncNewsEconomy = newsData.items.filter(
         (noticia) => noticia.category === "economy"
     );
 
-    const noticiasArray: number[] = [];
+    const newArray: number[] = [];
 
-    while (noticiasArray.length < 3) {
-        const numeroAleatorio = Math.floor(Math.random() * noticiasEconomia.length);
-        if (!noticiasArray.includes(numeroAleatorio)) {
-            noticiasArray.push(numeroAleatorio);
+    while (newArray.length < 3) {
+        const numRandom = Math.floor(Math.random() * fncNewsEconomy.length);
+        if (!newArray.includes(numRandom)) {
+            newArray.push(numRandom);
         }
     }
     
-    const imagenesFijas = ['EconomyIcon1.png', 'EconomyIcon2.png', 'EconomyIcon3.png'];
+    const imagesArray = ['EconomyIcon1.png', 'EconomyIcon2.png', 'EconomyIcon3.png'];
     
     return (
         <ContainerMultiNew>
             <TitleMultiNew>En la capital del país.</TitleMultiNew>
             <SubContainerMultiNew>
-                {noticiasArray.map((index, i) => (
+                {newArray.map((index, i) => (
                     <CardMultiNew key={index}>
                         <SubContainerCardMultiNew>
                             <IconCardMultiNew
-                                src={require(`../../../Assets/Icons/${imagenesFijas[i]}`)}
+                                src={require(`../../../Assets/Icons/${imagesArray[i]}`)}
                             ></IconCardMultiNew>
                             <TitleCardMultiNew
                                 onClick={() => {
-                                    window.location.href = `/Economy/:${noticiasEconomia[index].id}`;
+                                    window.location.href = `/Economy/:${fncNewsEconomy[index].id}`;
                                 }}
                             >
-                                {noticiasEconomia[index].title}
+                                {fncNewsEconomy[index].title}
                             </TitleCardMultiNew>
                             <DescritionCardMultiNew>
-                                {noticiasEconomia[index].description}
+                                {fncNewsEconomy[index].description}
                             </DescritionCardMultiNew>
                         </SubContainerCardMultiNew>
                     </CardMultiNew>

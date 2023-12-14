@@ -8,44 +8,44 @@ export default function MultiNews() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasCiencia = newsData.items.filter(
+    const fncNewsScience = newsData.items.filter(
         (noticia) => noticia.category === "science"
     );
 
-    const noticiasArray: number[] = [];
+    const newArray: number[] = [];
 
-    while (noticiasArray.length < 3) {
-        const numeroAleatorio = Math.floor(
-            Math.random() * noticiasCiencia.length
+    while (newArray.length < 3) {
+        const numRandom = Math.floor(
+            Math.random() * fncNewsScience.length
         );
-        if (!noticiasArray.includes(numeroAleatorio)) {
-            noticiasArray.push(numeroAleatorio);
+        if (!newArray.includes(numRandom)) {
+            newArray.push(numRandom);
         }
     }
 
-    const imagenesFijas = ["ScienceImage1.webp","ScienceImage2.webp","ScienceImage3.webp"];
+    const imagesArray = ["ScienceImage1.webp","ScienceImage2.webp","ScienceImage3.webp"];
 
     return (
         <ContainerMultiNews>
             <TitleMultiNews>Latest news in the capital</TitleMultiNews>
             <SubContainerMultiNews>
-                {noticiasArray.map((index, i) => (
+                {newArray.map((index, i) => (
                     <ContainerIndividualMultiNews>
                         <ImagenMultiNews
-                            src={require(`../../../Assets/Images/${imagenesFijas[i]}`)}
+                            src={require(`../../../Assets/Images/${imagesArray[i]}`)}
                         />
                         <TitleIndividualMultiNews
                             onClick={() => {
-                                window.location.href = `/Science/:${noticiasCiencia[index].id}`;
+                                window.location.href = `/Science/:${fncNewsScience[index].id}`;
                             }}
                         >
-                            {noticiasCiencia[index].title}
+                            {fncNewsScience[index].title}
                         </TitleIndividualMultiNews>
                         <DescriptionMultiNews>
-                            {noticiasCiencia[index].title}
+                            {fncNewsScience[index].title}
                         </DescriptionMultiNews>
                         <ButtonMultiNews
-                            href={`/Politica/:${noticiasCiencia[index].id}`}
+                            href={`/Politica/:${fncNewsScience[index].id}`}
                         >
                             Read More{" "}
                         </ButtonMultiNews>

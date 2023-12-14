@@ -8,40 +8,40 @@ export default function MultiEntertainment() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasEntretenimiento = newsData.items.filter(
+    const fncNewsEntertainment = newsData.items.filter(
         (noticia) => noticia.category === "entertainment"
     );
 
-    const noticiasArray: number[] = [];
+    const newArray: number[] = [];
 
-    while (noticiasArray.length < 3) {
-        const numeroAleatorio = Math.floor(Math.random() * noticiasEntretenimiento.length);
-        if (!noticiasArray.includes(numeroAleatorio)) {
-            noticiasArray.push(numeroAleatorio);
+    while (newArray.length < 3) {
+        const numRandom = Math.floor(Math.random() * fncNewsEntertainment.length);
+        if (!newArray.includes(numRandom)) {
+            newArray.push(numRandom);
         }
     }
     
-    const imagenesFijas = ['EntertainmentIcon1.png', 'EntertainmentIcon2.png', 'EntertainmentIcon3.png'];
+    const imagesArray = ['EntertainmentIcon1.png', 'EntertainmentIcon2.png', 'EntertainmentIcon3.png'];
     
     return (
         <ContainerMultiNew>
             <TitleMultiNew>En la capital del país.</TitleMultiNew>
             <SubContainerMultiNew>
-                {noticiasArray.map((index, i) => (
+                {newArray.map((index, i) => (
                     <CardMultiNew key={index}>
                         <SubContainerCardMultiNew>
                             <IconCardMultiNew
-                                src={require(`../../../Assets/Icons/${imagenesFijas[i]}`)}
+                                src={require(`../../../Assets/Icons/${imagesArray[i]}`)}
                             ></IconCardMultiNew>
                             <TitleCardMultiNew
                                 onClick={() => {
-                                    window.location.href = `/Entertainment/:${noticiasEntretenimiento[index].id}`;
+                                    window.location.href = `/Entertainment/:${fncNewsEntertainment[index].id}`;
                                 }}
                             >
-                                {noticiasEntretenimiento[index].title}
+                                {fncNewsEntertainment[index].title}
                             </TitleCardMultiNew>
                             <DescritionCardMultiNew>
-                                {noticiasEntretenimiento[index].description}
+                                {fncNewsEntertainment[index].description}
                             </DescritionCardMultiNew>
                         </SubContainerCardMultiNew>
                     </CardMultiNew>

@@ -8,40 +8,40 @@ export default function MultiSports() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasDeportes = newsData.items.filter(
+    const fncNewsSports = newsData.items.filter(
         (noticia) => noticia.category === "sports"
     );
 
-    const noticiasArray: number[] = [];
+    const newArray: number[] = [];
 
-    while (noticiasArray.length < 3) {
-        const numeroAleatorio = Math.floor(Math.random() * noticiasDeportes.length);
-        if (!noticiasArray.includes(numeroAleatorio)) {
-            noticiasArray.push(numeroAleatorio);
+    while (newArray.length < 3) {
+        const numRandom = Math.floor(Math.random() * fncNewsSports.length);
+        if (!newArray.includes(numRandom)) {
+            newArray.push(numRandom);
         }
     }
     
-    const imagenesFijas = ['SportIcon2.png', 'SportIcon3.png', 'SportIcon4.png'];
+    const imagesArray = ['SportIcon2.png', 'SportIcon3.png', 'SportIcon4.png'];
     
     return (
         <ContainerMultiNew>
             <TitleMultiNew>En la capital del país.</TitleMultiNew>
             <SubContainerMultiNew>
-                {noticiasArray.map((index, i) => (
+                {newArray.map((index, i) => (
                     <CardMultiNew key={index}>
                         <SubContainerCardMultiNew>
                             <IconCardMultiNew
-                                src={require(`../../../Assets/Icons/${imagenesFijas[i]}`)}
+                                src={require(`../../../Assets/Icons/${imagesArray[i]}`)}
                             ></IconCardMultiNew>
                             <TitleCardMultiNew
                                 onClick={() => {
-                                    window.location.href = `/Sports/:${noticiasDeportes[index].id}`;
+                                    window.location.href = `/Sports/:${fncNewsSports[index].id}`;
                                 }}
                             >
-                                {noticiasDeportes[index].title}
+                                {fncNewsSports[index].title}
                             </TitleCardMultiNew>
                             <DescritionCardMultiNew>
-                                {noticiasDeportes[index].description}
+                                {fncNewsSports[index].description}
                             </DescritionCardMultiNew>
                         </SubContainerCardMultiNew>
                     </CardMultiNew>

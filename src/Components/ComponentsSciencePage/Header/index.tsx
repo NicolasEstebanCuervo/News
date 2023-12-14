@@ -8,19 +8,17 @@ export default function HeaderComponent() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasCiencia = newsData.items.filter(
+    const fncNewsScience = newsData.items.filter(
         (noticia) => noticia.category === "science"
     );
 
-    if (noticiasCiencia.length === 0) {
-        return <div>No hay noticias de ciencia disponibles.</div>;
-    }
 
-    const numeroAleatorio = Math.floor(
-        Math.random() * noticiasCiencia.length
+
+    const numRandom = Math.floor(
+        Math.random() * fncNewsScience.length
     );
 
-    const noticiaSeleccionada = noticiasCiencia[numeroAleatorio];
+    const newSelected = fncNewsScience[numRandom];
 
     return (
         <ContainerMain>
@@ -28,16 +26,16 @@ export default function HeaderComponent() {
                 src={require("../../../Assets/Images/ScienceImage5.webp")}
             ></ContainerImage>
 
-            {noticiaSeleccionada && (
-                <ContainerTexts key={noticiaSeleccionada.id}>
+            {newSelected && (
+                <ContainerTexts key={newSelected.id}>
                     <ContainerTitleHeader>
                         <TitleTextHeader>
-                            {noticiaSeleccionada.title}
+                            {newSelected.title}
                         </TitleTextHeader>
                     </ContainerTitleHeader>
                     <ContainerTextsDescription>
                         <DescriptionHeader>
-                            {noticiaSeleccionada.description}
+                            {newSelected.description}
                         </DescriptionHeader>
                     </ContainerTextsDescription>
                 </ContainerTexts>

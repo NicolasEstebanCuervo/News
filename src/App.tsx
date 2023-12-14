@@ -14,7 +14,6 @@ import SciencePageIndividual from "./Pages/SciencePage/SciencePageindividual";
 import SportsPageIndividual from "./Pages/SportsPage/SportsPageindividual";
 import EntertainmentPageIndividual from "./Pages/EntertainmentPage/EntertainmentPageindividual";
 
-
 function App() {
   return (
     <div className='App'>
@@ -28,7 +27,6 @@ function App() {
           <Route path="/Sports" element={<SportsPage></SportsPage>}/>
           <Route path="/Science" element={<SciencePage></SciencePage>}/>
           <Route path="/Entertainment" element={<EntertainmentPage></EntertainmentPage>}/>
-          
 
           <Route path="/Politics/:id" element={<PoliticsPageIndividual></PoliticsPageIndividual>}/>
           <Route path="/Economy/:id" element={<EconomyPageIndividual></EconomyPageIndividual>}/>

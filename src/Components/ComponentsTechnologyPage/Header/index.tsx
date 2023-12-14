@@ -8,19 +8,15 @@ export default function HeaderComponent() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasTecnologia = newsData.items.filter(
+    const fncNewsTechnology = newsData.items.filter(
         (noticia) => noticia.category === "technology"
     );
 
-    if (noticiasTecnologia.length === 0) {
-        return <div>No hay noticias de tecnologia disponibles.</div>;
-    }
-
-    const numeroAleatorio = Math.floor(
-        Math.random() * noticiasTecnologia.length
+    const numRandom = Math.floor(
+        Math.random() * fncNewsTechnology.length
     );
 
-    const noticiaSeleccionada = noticiasTecnologia[numeroAleatorio];
+    const newSelected = fncNewsTechnology[numRandom];
 
     return (
         <ContainerMain>
@@ -28,16 +24,16 @@ export default function HeaderComponent() {
                 src={require("../../../Assets/Images/TechnologyImage6.webp")}
             ></ContainerImage>
 
-            {noticiaSeleccionada && (
-                <ContainerTexts key={noticiaSeleccionada.id}>
+            {newSelected && (
+                <ContainerTexts key={newSelected.id}>
                     <ContainerTitleHeader>
                         <TitleTextHeader>
-                            {noticiaSeleccionada.title}
+                            {newSelected.title}
                         </TitleTextHeader>
                     </ContainerTitleHeader>
                     <ContainerTextsDescription>
                         <DescriptionHeader>
-                            {noticiaSeleccionada.description}
+                            {newSelected.description}
                         </DescriptionHeader>
                     </ContainerTextsDescription>
                 </ContainerTexts>

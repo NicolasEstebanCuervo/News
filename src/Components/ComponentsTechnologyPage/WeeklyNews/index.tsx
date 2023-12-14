@@ -8,18 +8,16 @@ export default function WeeklyNews() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasTecnologia = newsData.items.filter(
+    const fncNewsTechnology = newsData.items.filter(
         (noticia) => noticia.category === "technology"
     );
 
-    if (noticiasTecnologia.length === 0) {
-        return <div>No hay noticias de tecnologia disponibles.</div>;
-    }
+numRandom
 
     return (
         <WeeklyNewsContainer>
             <WeeklyNewsTitle>Weekly News</WeeklyNewsTitle>
-            {noticiasTecnologia.slice(0, 1).map((noticia, index) => (
+            {fncNewsTechnology.slice(0, 1).map((noticia, index) => (
                 <WeeklyNewsItem key={index}>
                     <NewsImage
                         src={require("../../../Assets/Images/TechnologyImage5.webp")}

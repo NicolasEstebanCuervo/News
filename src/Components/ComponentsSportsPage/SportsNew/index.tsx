@@ -8,28 +8,24 @@ export default function SportsNew() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasDeportes = newsData.items.filter(
+    const fncNewsSports = newsData.items.filter(
         (noticia) => noticia.category === "sports"
     );
 
-    if (noticiasDeportes.length === 0) {
-        return <div>No hay noticias de deportes disponibles.</div>;
-    }
-
-    const numeroAleatorio = Math.floor(
-        Math.random() * noticiasDeportes.length
+    const numRandom = Math.floor(
+        Math.random() * fncNewsSports.length
     );
 
-    const noticiaSeleccionada = noticiasDeportes[numeroAleatorio];
+    const newSelected = fncNewsSports[numRandom];
 
     return (
-        <ContainerPoliticaNew>
-            {noticiaSeleccionada && (
-                <TitlePoliticaNews href={`/Sports/:${noticiaSeleccionada.id}`}>
-                    {noticiaSeleccionada.title}
-                </TitlePoliticaNews>
+        <ContainerNew>
+            {newSelected && (
+                <TitleNew href={`/Sports/:${newSelected.id}`}>
+                    {newSelected.title}
+                </TitleNew>
             )}
-            <SubContainerPoliticaNew>
+            <SubContainerNew>
                 <TextContainer>
                     <Text>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -98,12 +94,12 @@ export default function SportsNew() {
                         lectus.
                     </Text>
                 </TextContainer>
-            </SubContainerPoliticaNew>
-        </ContainerPoliticaNew>
+            </SubContainerNew>
+        </ContainerNew>
     );
 }
 
-const ContainerPoliticaNew = styled.section`
+const ContainerNew = styled.section`
     display: flex;
     gap: 5vh;
     flex-direction: column;
@@ -112,7 +108,7 @@ const ContainerPoliticaNew = styled.section`
     font-family: "Noto Serif", serif;
 `;
 
-const TitlePoliticaNews = styled.a`
+const TitleNew = styled.a`
     width: 70%;
     text-align: center;
     font-size: 50px;
@@ -131,7 +127,7 @@ const TitlePoliticaNews = styled.a`
     }
 `;
 
-const SubContainerPoliticaNew = styled.div`
+const SubContainerNew = styled.div`
     display: flex;
     justify-content: space-between;
     width: 70%;

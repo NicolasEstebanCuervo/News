@@ -8,40 +8,40 @@ export default function MultiTechnology() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasTecnologia = newsData.items.filter(
+    const fncNewsTechnology = newsData.items.filter(
         (noticia) => noticia.category === "technology"
     );
 
-    const noticiasArray: number[] = [];
+    const newArray: number[] = [];
 
-    while (noticiasArray.length < 3) {
-        const numeroAleatorio = Math.floor(Math.random() * noticiasTecnologia.length);
-        if (!noticiasArray.includes(numeroAleatorio)) {
-            noticiasArray.push(numeroAleatorio);
+    while (newArray.length < 3) {
+        const numRandom = Math.floor(Math.random() * fncNewsTechnology.length);
+        if (!newArray.includes(numRandom)) {
+            newArray.push(numRandom);
         }
     }
     
-    const imagenesFijas = ['TechnologyIcon1.png', 'TechnologyIcon2.png', 'TechnologyIcon3.png'];
+    const imagesArray = ['TechnologyIcon1.png', 'TechnologyIcon2.png', 'TechnologyIcon3.png'];
 
     return (
         <ContainerMultiNew>
             <TitleMultiNew>En la capital del país.</TitleMultiNew>
             <SubContainerMultiNew>
-                {noticiasArray.map((index, i) => (
+                {newArray.map((index, i) => (
                     <CardMultiNew key={index}>
                         <SubContainerCardMultiNew>
                             <IconCardMultiNew
-                                src={require(`../../../Assets/Icons/${imagenesFijas[i]}`)}
+                                src={require(`../../../Assets/Icons/${imagesArray[i]}`)}
                             ></IconCardMultiNew>
                             <TitleCardMultiNew
                                 onClick={() => {
-                                    window.location.href = `/Technology/:${noticiasTecnologia[index].id}`;
+                                    window.location.href = `/Technology/:${fncNewsTechnology[index].id}`;
                                 }}
                             >
-                                {noticiasTecnologia[index].title}
+                                {fncNewsTechnology[index].title}
                             </TitleCardMultiNew>
                             <DescritionCardMultiNew>
-                                {noticiasTecnologia[index].description}
+                                {fncNewsTechnology[index].description}
                             </DescritionCardMultiNew>
                         </SubContainerCardMultiNew>
                     </CardMultiNew>

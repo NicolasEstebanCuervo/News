@@ -8,40 +8,40 @@ export default function MultiCulture() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasCultura = newsData.items.filter(
+    const fncNewsCulture = newsData.items.filter(
         (noticia) => noticia.category === "culture"
     );
 
-    const noticiasArray: number[] = [];
+    const newArray: number[] = [];
 
-    while (noticiasArray.length < 3) {
-        const numeroAleatorio = Math.floor(Math.random() * noticiasCultura.length);
-        if (!noticiasArray.includes(numeroAleatorio)) {
-            noticiasArray.push(numeroAleatorio);
+    while (newArray.length < 3) {
+        const numRandom = Math.floor(Math.random() * fncNewsCulture.length);
+        if (!newArray.includes(numRandom)) {
+            newArray.push(numRandom);
         }
     }
     
-    const imagenesFijas = ['CultureIcon2.png', 'CultureIcon3.png', 'CultureIcon4.png'];
+    const imagesArray = ['CultureIcon2.png', 'CultureIcon3.png', 'CultureIcon4.png'];
     
     return (
         <ContainerMultiNew>
             <TitleMultiNew>En la capital del país.</TitleMultiNew>
             <SubContainerMultiNew>
-                {noticiasArray.map((index, i) => (
+                {newArray.map((index, i) => (
                     <CardMultiNew key={index}>
                         <SubContainerCardMultiNew>
                             <IconCardMultiNew
-                                src={require(`../../../Assets/Icons/${imagenesFijas[i]}`)}
+                                src={require(`../../../Assets/Icons/${imagesArray[i]}`)}
                             ></IconCardMultiNew>
                             <TitleCardMultiNew
                                 onClick={() => {
-                                    window.location.href = `/Culture/:${noticiasCultura[index].id}`;
+                                    window.location.href = `/Culture/:${fncNewsCulture[index].id}`;
                                 }}
                             >
-                                {noticiasCultura[index].title}
+                                {fncNewsCulture[index].title}
                             </TitleCardMultiNew>
                             <DescritionCardMultiNew>
-                                {noticiasCultura[index].description}
+                                {fncNewsCulture[index].description}
                             </DescritionCardMultiNew>
                         </SubContainerCardMultiNew>
                     </CardMultiNew>

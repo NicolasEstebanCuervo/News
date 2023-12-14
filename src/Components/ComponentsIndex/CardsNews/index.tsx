@@ -8,17 +8,13 @@ export default function CardsNews() {
         return <div>Cargando...</div>;
     }
 
-    const noticiasTecnologia = newsData.items.filter(
+    const fncNewsTechnology = newsData.items.filter(
         (noticia) => noticia.category === "technology"
     );
 
-    if (noticiasTecnologia.length === 0) {
-        return <div>No hay noticias de tecnología disponibles.</div>;
-    }
+    const noticiasLimitadas = fncNewsTechnology.slice(0, 4);
 
-    const noticiasLimitadas = noticiasTecnologia.slice(0, 4);
-
-    const imagenesFijas = ["TechnologyImage1", "TechnologyImage2", "TechnologyImage3", "TechnologyImage4"];
+    const imagesArray = ["TechnologyImage1", "TechnologyImage2", "TechnologyImage3", "TechnologyImage4"];
 
     return (
         <ContainerCardsNews>
@@ -28,7 +24,7 @@ export default function CardsNews() {
                     <ContainerCardIndividual key={item}>
                         <ContainerImage
                             src={
-                                require(`../../../Assets/Images/${imagenesFijas[item]}.webp`)
+                                require(`../../../Assets/Images/${imagesArray[item]}.webp`)
                             } 
                             alt={`Imagen ${item + 1}`}
                         />
