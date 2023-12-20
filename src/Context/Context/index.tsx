@@ -1,10 +1,10 @@
-import  {
+import {
     createContext,
     useContext,
     useEffect,
     useState,
     ReactNode,
-    ChangeEvent
+    ChangeEvent,
 } from "react";
 import { v4 as uuidv4 } from "uuid";
 
@@ -14,13 +14,13 @@ interface Comment {
     comment: string;
 }
 
-export  interface NewsItem {
+export interface NewsItem {
     id: number;
     title?: string;
     category?: string;
     description?: string;
-    name?:string;
-    comment?:string;
+    name?: string;
+    comment?: string;
 }
 
 interface NewsData {
@@ -53,12 +53,11 @@ export const NewsProvider = ({ children }: NewsProviderProps) => {
 
     const changeTitleFnc = (event: React.ChangeEvent<HTMLInputElement>) => {
         setTitle(event.target.value);
-      };
-    
-      const changeCommentFnc = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setComment(event.target.value);
-      };
+    };
 
+    const changeCommentFnc = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setComment(event.target.value);
+    };
 
     const handleFormFnc = () => {
         const commentNew: Comment = {
@@ -90,13 +89,13 @@ export const NewsProvider = ({ children }: NewsProviderProps) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-              const response = await import("../Data");
-              const responseData: NewsData = response.default;
-              setNewsData(responseData);
+                const response = await import("../Data");
+                const responseData: NewsData = response.default;
+                setNewsData(responseData);
             } catch (error) {
-              console.error("Error fetching news data:", error);
+                console.error("Error fetching news data:", error);
             }
-          };
+        };
 
         fetchData();
     }, []);

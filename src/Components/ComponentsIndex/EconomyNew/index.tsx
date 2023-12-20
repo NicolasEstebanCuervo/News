@@ -130,7 +130,7 @@ const LearnMoreButton = styled.a`
     border: none;
     cursor: pointer;
     gap: 1rem;
-    color: #f9c80e;
+    color: #1E8449;
     text-decoration-line: none;
     @media (max-width: 1250px) {
         font-size: 25px;

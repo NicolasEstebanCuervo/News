@@ -879,34 +879,7 @@ const data = {
             category: "comment",
             comment:
                 "Estos narradores orales son verdaderos guardianes de nuestra herencia cultural. Transmitir las narrativas de manera contemporánea asegura que perduren en la conciencia colectiva. 🗣️📚",
-        },
-        {
-            id: 126,
-            name: "Isabel",
-            comment:
-                "La adaptación de las historias ancestrales por parte de los narradores orales es una forma única de mantener viva nuestra cultura. Están construyendo puentes entre generaciones con cada palabra hablada. 🌉🎙️",
-        },
-        {
-            id: 127,
-            name: "Juan",
-            category: "comment",
-            comment:
-                "Es inspirador ver cómo los narradores orales infunden nueva vida en las narrativas ancestrales. Están contribuyendo significativamente a la preservación de nuestra rica herencia cultural. 👏🏾📖",
-        },
-        {
-            id: 128,
-            name: "Karla",
-            category: "comment",
-            comment:
-                "La conexión entre pasado y presente que logran los narradores orales es asombrosa. Están preservando la riqueza de nuestras tradiciones de una manera que resuena con la sociedad actual. 🌍📖",
-        },
-        {
-            id: 129,
-            name: "Luis",
-            category: "comment",
-            comment:
-                "Estos narradores orales son verdaderos artistas, fusionando la antigua sabiduría con la modernidad. Están construyendo puentes culturales que enriquecen nuestra comprensión del pasado y presente. 🎨🌐",
-        },
+        }
     ],
 };
 
