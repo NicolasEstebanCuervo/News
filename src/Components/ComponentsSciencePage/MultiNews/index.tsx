@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { useNews } from "../../../Context/Context";
+import { useNews } from "../../../Context/ContextData";
 
 export default function MultiNews() {
     const { newsData } = useNews();
@@ -9,7 +9,7 @@ export default function MultiNews() {
     }
 
     const fncNewsScience = newsData.items.filter(
-        (noticia) => noticia.category === "science"
+        (newPost) => newPost.category === "science"
     );
 
     const newArray: number[] = [];

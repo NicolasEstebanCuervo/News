@@ -1,13 +1,23 @@
-import React, { useState } from "react";
-import { useNews } from "../../../../Context/Context";
+import React, { useEffect, useState } from "react";
+import { useNews } from "../../../../Context/ContextData";
+import { useNewsForm } from "../../../../Context/ContextForm";
 import Comment from "../Comment";
 import FormComponent from "../FormComment";
 import styled from "@emotion/styled";
+import { useImage } from "../../../../Context/ContextImage";
 
-const ListComments: React.FC = () => {
+const ListComments = () => {
+    const [heartFilled, setHeartFilled] = useState(false);
+
     const context = useNews();
+    const contextForm = useNewsForm();
+    const imageContext = useImage();
+    const { getImageUrls } = imageContext;
+    const imageUrls = getImageUrls();
+
+    const { newsData } = context;
+
     const {
-        newsData,
         comments,
         title,
         comment,
@@ -15,15 +25,16 @@ const ListComments: React.FC = () => {
         changeTitleFnc,
         changeCommentFnc,
         handleFormFnc,
-    } = context;
+    } = contextForm;
 
-    if (!newsData || !newsData.items || newsData.items.length === 0) {
-        return <div>Cargando...</div>;
-    }
+    const fncNewComments =
+        newsData?.items?.filter((comment) => comment.category === "comment") ||
+        [];
 
-    const fncNewComments = newsData.items.filter(
-        (comment) => comment.category === "comment"
-    );
+    useEffect(() => {
+        const randomImageUrl = generateProfileImageURL(Date.now());
+        imageContext.addImageUrl(randomImageUrl);
+    }, []);
 
     const generateProfileImageURL = (email: number): string => {
         return `https://api.dicebear.com/7.x/micah/svg?seed=${email}.svg`;
@@ -54,9 +65,14 @@ const ListComments: React.FC = () => {
                         />
                     ))}
                 </div>
-
                 {fncNewComments.map((comment) => (
                     <ContainerComment key={comment.id}>
+                        <HeartIcon
+                            className={`bi ${
+                                heartFilled ? "bi-suit-heart-fill" : "bi-heart"
+                            }`}
+                            onClick={() => setHeartFilled(!heartFilled)}
+                        ></HeartIcon>
                         <ImageComment
                             src={generateProfileImageURL(
                                 Math.floor(Math.random() * 100) + 1
@@ -65,7 +81,6 @@ const ListComments: React.FC = () => {
                         />
                         <ContainerTexsComments>
                             <Name>{comment.name}</Name>
-
                             <CommentPerson>{comment.comment}</CommentPerson>
                         </ContainerTexsComments>
                     </ContainerComment>
@@ -131,6 +146,23 @@ const ContainerComment = styled.div`
     padding: 2% 1%;
     display: flex;
     align-items: start;
+    position: relative;
+`;
+
+const HeartIcon = styled.i`
+    font-size: 20px;
+    position: absolute;
+    top: 5%;
+    right: 1.5%;
+    cursor: pointer;
+
+    @media (max-width: 500px) {
+        top: 1%;
+    }
+
+    @media (max-width: 300px) {
+        font-size: 5vw;
+    }
 `;
 
 const ImageComment = styled.img`

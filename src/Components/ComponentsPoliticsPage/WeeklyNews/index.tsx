@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { useNews } from "../../../Context/Context";
+import { useNews } from "../../../Context/ContextData";
 
 export default function WeeklyNews() {
     const { newsData } = useNews();
@@ -9,7 +9,7 @@ export default function WeeklyNews() {
     }
 
     const fncNewsPolitics = newsData.items.filter(
-        (noticia) => noticia.category === "politics"
+        (newPost) => newPost.category === "politics"
     );
 
 
@@ -17,14 +17,14 @@ export default function WeeklyNews() {
     return (
         <WeeklyNewsContainer>
             <WeeklyNewsTitle>Weekly News</WeeklyNewsTitle>
-            {fncNewsPolitics.slice(0, 1).map((noticia, index) => (
+            {fncNewsPolitics.slice(0, 1).map((post, index) => (
                 <WeeklyNewsItem key={index}>
                     <NewsImage
                         src={require("../../../Assets/Images/PoliticsImage5.webp")}
-                        alt={noticia.title}
+                        alt={post.title}
                     />
                     <NewsInfoContainer>
-                        <NewsTitle href={`Politics/:${noticia.id}`}>{noticia.title}</NewsTitle>
+                        <NewsTitle href={`Politics/:${post.id}`}>{post.title}</NewsTitle>
                         <NewsParagraph>
                             Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit. Aliquam sed ipsa enim aut ea. Amet quae

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { useNews } from "../../../Context/Context";
+import { useNews } from "../../../Context/ContextData";
 
 export default function MultiNews() {
     const { newsData } = useNews();
@@ -9,15 +9,15 @@ export default function MultiNews() {
     }
 
     const newCulture = newsData.items.filter(
-        (noticia) => noticia.category === "culture"
+        (newPost) => newPost.category === "culture"
     );
 
     const newSports = newsData.items.filter(
-        (noticia) => noticia.category === "sports"
+        (newPost) => newPost.category === "sports"
     );
 
     const newScience = newsData.items.filter(
-        (noticia) => noticia.category === "science"
+        (newPost) => newPost.category === "science"
     );
 
     const newsLimitedCulture = newCulture.slice(0, 1);

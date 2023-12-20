@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { NewsItem, useNews } from "../../../Context/Context";
+import { NewsItem, useNews } from "../../../Context/ContextData";
 
 export default function HeaderComponent() {
     const { newsData } = useNews();
@@ -9,7 +9,7 @@ export default function HeaderComponent() {
     }
 
     const fncNewsSports = newsData.items.filter(
-        (noticia) => noticia.category === "sports"
+        (newPost) => newPost.category === "sports"
     );
 
     const numRandom = Math.floor(Math.random() * fncNewsSports.length);

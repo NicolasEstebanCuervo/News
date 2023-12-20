@@ -1,33 +1,6 @@
 import styled from "@emotion/styled";
-import { useNews } from "../../../../Context/Context";
-import { useParams } from "react-router-dom";
 
 export default function MoreText() {
-    const { newsData } = useNews();
-    const { id } = useParams();
-    let idWithoutFirstDigit: string | undefined;
-
-    if (id !== undefined) {
-        idWithoutFirstDigit = id.slice(1);
-    } else {
-        console.error("El parámetro 'id' es undefined");
-    }
-
-    if (id !== undefined) {
-        idWithoutFirstDigit = id.slice(1);
-    } else {
-        console.error("El parámetro 'id' es undefined");
-    }
-
-    if (!newsData || !newsData.items || newsData.items.length === 0) {
-        return <div>Cargando...</div>;
-    }
-
-    const fncNewsTechnology = newsData.items.filter(
-        (noticia) => noticia.id === Number(idWithoutFirstDigit)
-    );
-
-    const newSelected = fncNewsTechnology[0];
 
     return (
         <ContainerNew>

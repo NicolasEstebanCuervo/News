@@ -3,8 +3,9 @@ import NavBarComponent from "../../Components/NavBar";
 import HeaderComponent from "../../Components/ComponentsTechnologyPage/ComponentsPageIndividual/Header";
 import MoreText from "../../Components/ComponentsTechnologyPage/ComponentsPageIndividual/MoreText";
 import ListComment from "../../Components/ComponentsTechnologyPage/ComponentsPageIndividual/ListComments";
-import ListOtherNews from "../../Components/ComponentsTechnologyPage/ComponentsPageIndividual/ListOtherNews";
 import Footer from "../../Components/Footer";
+import { NewsFormProvider } from "../../Context/ContextForm";
+import { ImageProvider } from "../../Context/ContextImage";
 
 export default function TechnologyPage() {
     return (
@@ -13,13 +14,14 @@ export default function TechnologyPage() {
             <SubContainerMain>
                 <ContainerHeader>
                     <HeaderComponent />
-                    <LineDivider />
-
                     <MoreText />
                 </ContainerHeader>
-                <LineDivider2 />
-
-                    <ListComment />
+                <LineDivider />
+                <NewsFormProvider>
+                    <ImageProvider>
+                        <ListComment />
+                    </ImageProvider>
+                </NewsFormProvider>
             </SubContainerMain>
             <Footer />
         </ContainerMain>
@@ -70,16 +72,6 @@ const SubContainerMain = styled.div`
 `;
 
 const LineDivider = styled.hr`
-    color: #161616;
-    width: 70%;
-    margin: 0;
-
-    @media (max-width: 600px) {
-        width: 90%;
-    }
-`;
-
-const LineDivider2 = styled.hr`
     color: #161616;
     width: 90%;
     margin: 0;

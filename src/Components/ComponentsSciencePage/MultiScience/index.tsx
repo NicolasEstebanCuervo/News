@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { useNews } from "../../../Context/Context";
+import { useNews } from "../../../Context/ContextData";
 
 export default function MultiScience() {
     const { newsData } = useNews();
@@ -9,7 +9,7 @@ export default function MultiScience() {
     }
 
     const fncNewsScience = newsData.items.filter(
-        (noticia) => noticia.category === "science"
+        (newPost) => newPost.category === "science"
     );
 
     const newArray: number[] = [];
@@ -25,7 +25,7 @@ export default function MultiScience() {
     
     return (
         <ContainerMultiNew>
-            <TitleMultiNew>En la capital del país.</TitleMultiNew>
+            <TitleMultiNew>En la ultima semana</TitleMultiNew>
             <SubContainerMultiNew>
                 {newArray.map((index, i) => (
                     <CardMultiNew key={index}>

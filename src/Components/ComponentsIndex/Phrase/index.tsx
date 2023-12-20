@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 
 export default function Phrase () {
     const titlePhrases = [
-        "Stay informed with the latest headlines and breaking news on our News platform.",
-        "Explore a world of current events and in-depth coverage on our News website.",
-        "Uncover the stories that matter most with our comprehensive news coverage.",
-        "Engage with timely and reliable information from our trusted News source.",
-        "Discover a hub of journalistic excellence and stay connected to the pulse of the world on our News site.",
-    ];    
+        "Mantente informado con las últimas noticias y titulares de última hora en nuestra plataforma de noticias.",
+        "Explora un mundo de eventos actuales y cobertura en profundidad en nuestro sitio web de noticias.",
+        "Descubre las historias que más importan con nuestra cobertura de noticias completa.",
+        "Involúcrate con información oportuna y confiable de nuestra fuente de noticias de confianza.",
+        "Descubre un centro de excelencia periodística y mantente conectado con el pulso del mundo en nuestro sitio de noticias.",
+    ];
 
     const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
     const [currentPhrase, setCurrentPhrase] = useState("");

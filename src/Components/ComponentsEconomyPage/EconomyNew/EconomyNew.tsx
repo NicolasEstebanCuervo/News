@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { useNews } from "../../../Context/Context";
+import { useNews } from "../../../Context/ContextData";
 
 export default function EconomyNew() {
     const { newsData } = useNews();
@@ -9,7 +9,7 @@ export default function EconomyNew() {
     }
 
     const fncNewsEconomy = newsData.items.filter(
-        (noticia) => noticia.category === "economy"
+        (newPost) => newPost.category === "economy"
     );
 
 

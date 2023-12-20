@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
-import { useState, FormEvent, ChangeEvent } from "react";
+import {  FormEvent } from "react";
+
 interface FormProps {
     changeTitleFnc: (event: React.ChangeEvent<HTMLInputElement>) => void;
     changeCommentFnc: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -15,14 +16,13 @@ export default function FormComponent({
     title,
     comment,
 }: FormProps) {
-    const handreSubmit = (e: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
         handleFormFnc();
     };
 
     return (
-        <ContainerComment onSubmit={handreSubmit}>
+        <ContainerComment onSubmit={handleSubmit}>
             <ContainerTexsComments>
                 <Name
                     type="text"

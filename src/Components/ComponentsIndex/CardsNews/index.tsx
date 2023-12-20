@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { useNews } from "../../../Context/Context";
+import { useNews } from "../../../Context/ContextData";
 
 export default function CardsNews() {
     const { newsData } = useNews();
@@ -9,10 +9,10 @@ export default function CardsNews() {
     }
 
     const fncNewsTechnology = newsData.items.filter(
-        (noticia) => noticia.category === "technology"
+        (newPost) => newPost.category === "technology"
     );
 
-    const noticiasLimitadas = fncNewsTechnology.slice(0, 4);
+    const limitedNews = fncNewsTechnology.slice(0, 4);
 
     const imagesArray = ["TechnologyImage1", "TechnologyImage2", "TechnologyImage3", "TechnologyImage4"];
 
@@ -20,7 +20,7 @@ export default function CardsNews() {
         <ContainerCardsNews>
             <TitleCardsNews>Tecnologia</TitleCardsNews>
             <SubContainerCardsNews>
-                {noticiasLimitadas.map((noticia, item) => (
+                {limitedNews.map((post, item) => (
                     <ContainerCardIndividual key={item}>
                         <ContainerImage
                             src={
@@ -32,13 +32,13 @@ export default function CardsNews() {
                             <NumberNew>{item + 1}</NumberNew>
                             <TitleNew
                                 onClick={() => {
-                                    window.location.href = `/Technology/:${noticia.id}`;
+                                    window.location.href = `/Technology/:${post.id}`;
                                 }}
                             >
-                                {noticia.title}
+                                {post.title}
                             </TitleNew>
                             <DescriptionNew>
-                                {noticia.description}
+                                {post.description}
                             </DescriptionNew>
                         </ContainerTexts>
                     </ContainerCardIndividual>

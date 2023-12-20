@@ -1,11 +1,4 @@
-import {
-    createContext,
-    useContext,
-    useEffect,
-    useState,
-    ReactNode,
-    ChangeEvent,
-} from "react";
+import React, { createContext, useContext, useState, ReactNode, ChangeEvent,useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 interface Comment {
@@ -14,21 +7,7 @@ interface Comment {
     comment: string;
 }
 
-export interface NewsItem {
-    id: number;
-    title?: string;
-    category?: string;
-    description?: string;
-    name?: string;
-    comment?: string;
-}
-
-interface NewsData {
-    status: string;
-    items: NewsItem[];
-}
-
-interface NewsContextProps {
+interface NewsFormContextProps {
     title: string;
     comment: string;
     comments: Comment[];
@@ -36,20 +15,19 @@ interface NewsContextProps {
     changeCommentFnc: (event: ChangeEvent<HTMLInputElement>) => void;
     deleteCommentFnc: (id: string) => void;
     handleFormFnc: () => void;
-    newsData: NewsData | null;
 }
 
-const NewsContext = createContext<NewsContextProps | undefined>(undefined);
+const NewsContext = createContext<NewsFormContextProps | undefined>(undefined);
 
-interface NewsProviderProps {
+interface NewsFormProviderProps {
     children: ReactNode;
 }
 
-export const NewsProvider = ({ children }: NewsProviderProps) => {
+export const NewsFormProvider = ({ children }: NewsFormProviderProps) => {
     const [title, setTitle] = useState("");
     const [comment, setComment] = useState("");
     const [comments, setComments] = useState<Comment[]>([]);
-    const [newsData, setNewsData] = useState<NewsData | null>(null);
+    const [loaded, setLoaded] = useState(false)
 
     const changeTitleFnc = (event: React.ChangeEvent<HTMLInputElement>) => {
         setTitle(event.target.value);
@@ -62,8 +40,8 @@ export const NewsProvider = ({ children }: NewsProviderProps) => {
     const handleFormFnc = () => {
         const commentNew: Comment = {
             id: uuidv4({}),
-            title: title,
-            comment: comment,
+            title: title.trim(),
+            comment: comment.trim(),
         };
         addCommentFnc(commentNew);
         setTitle("");
@@ -72,35 +50,22 @@ export const NewsProvider = ({ children }: NewsProviderProps) => {
 
     const addCommentFnc = (comment: Comment) => {
         if (comment.comment.trim()) {
-            setComments((comments) => {
-                comment.comment = comment.comment.trim();
-                comment.title = comment.title.trim();
-                return [comment, ...comments];
-            });
+            setComments((prevComments) => [comment, ...prevComments]);
         }
     };
 
     const deleteCommentFnc = (id: string) => {
-        setComments((currentComments) =>
-            currentComments.filter((comment) => comment.id !== id)
-        );
+        setComments((prevComments) => prevComments.filter((comment) => comment.id !== id));
     };
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await import("../Data");
-                const responseData: NewsData = response.default;
-                setNewsData(responseData);
-            } catch (error) {
-                console.error("Error fetching news data:", error);
-            }
-        };
+        if (!loaded) {  
+            setLoaded(true)
+        }
 
-        fetchData();
-    }, []);
+    }, [loaded])
 
-    const contextValue: NewsContextProps = {
+    const contextValue: NewsFormContextProps = {
         title,
         comment,
         comments,
@@ -108,7 +73,6 @@ export const NewsProvider = ({ children }: NewsProviderProps) => {
         changeCommentFnc,
         deleteCommentFnc,
         handleFormFnc,
-        newsData,
     };
 
     return (
@@ -118,7 +82,7 @@ export const NewsProvider = ({ children }: NewsProviderProps) => {
     );
 };
 
-export const useNews = (): NewsContextProps => {
+export const useNewsForm = (): NewsFormContextProps => {
     const context = useContext(NewsContext);
     if (!context) {
         throw new Error("useNews must be used within a NewsProvider");

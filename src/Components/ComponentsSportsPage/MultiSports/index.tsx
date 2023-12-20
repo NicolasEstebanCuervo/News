@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { useNews } from "../../../Context/Context";
+import { useNews } from "../../../Context/ContextData";
 
 export default function MultiSports() {
     const { newsData } = useNews();
@@ -9,7 +9,7 @@ export default function MultiSports() {
     }
 
     const fncNewsSports = newsData.items.filter(
-        (noticia) => noticia.category === "sports"
+        (newPost) => newPost.category === "sports"
     );
 
     const newArray: number[] = [];
@@ -25,7 +25,7 @@ export default function MultiSports() {
     
     return (
         <ContainerMultiNew>
-            <TitleMultiNew>En la capital del país.</TitleMultiNew>
+            <TitleMultiNew>En la ultima semana</TitleMultiNew>
             <SubContainerMultiNew>
                 {newArray.map((index, i) => (
                     <CardMultiNew key={index}>

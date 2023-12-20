@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { NewsItem, useNews } from "../../../Context/Context";
+import { NewsItem, useNews } from "../../../Context/ContextData";
 
 export default function NewComponent() {
     const { newsData } = useNews();

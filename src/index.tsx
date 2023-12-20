@@ -4,7 +4,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Global, css } from '@emotion/react';
 import App from './App';
-import { NewsProvider } from './Context/Context';
+import { NewsProvider } from './Context/ContextData';
 
 const globalStyles = css`
   * {

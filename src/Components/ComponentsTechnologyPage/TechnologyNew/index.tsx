@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { useNews } from "../../../Context/Context";
+import { useNews } from "../../../Context/ContextData";
 
 export default function TechnologyNew() {
     const { newsData } = useNews();
@@ -9,7 +9,7 @@ export default function TechnologyNew() {
     }
 
     const fncNewsTechnology = newsData.items.filter(
-        (noticia) => noticia.category === "technology"
+        (newPost) => newPost.category === "technology"
     );
 
     const numRandom = Math.floor(
