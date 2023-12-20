@@ -58,6 +58,7 @@ const ContainerComment = styled.form`
 `;
 
 const ContainerTexsComments = styled.div`
+    width: 90%;
     display: flex;
     gap: 3vh;
     flex-direction: column;

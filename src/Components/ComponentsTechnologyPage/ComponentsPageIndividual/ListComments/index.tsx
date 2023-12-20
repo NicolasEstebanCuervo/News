@@ -31,14 +31,15 @@ const ListComments: React.FC = () => {
 
     return (
         <ContainerComments>
-            <TitleCardsNews>Comentarios</TitleCardsNews>
-            <FormComponent
-                title={title}
-                comment={comment}
-                changeTitleFnc={changeTitleFnc}
-                changeCommentFnc={changeCommentFnc}
-                handleFormFnc={handleFormFnc}
-            />
+            <SubContainerComments>
+                <TitleCardsNews>Comentarios</TitleCardsNews>
+                <FormComponent
+                    title={title}
+                    comment={comment}
+                    changeTitleFnc={changeTitleFnc}
+                    changeCommentFnc={changeCommentFnc}
+                    handleFormFnc={handleFormFnc}
+                />
                 <div>
                     {comments.map((comment) => (
                         <Comment
@@ -69,6 +70,7 @@ const ListComments: React.FC = () => {
                         </ContainerTexsComments>
                     </ContainerComment>
                 ))}
+            </SubContainerComments>
         </ContainerComments>
     );
 };
@@ -77,13 +79,33 @@ export default ListComments;
 
 const ContainerComments = styled.section`
     display: flex;
-    flex-direction: column;
-    width: 50%;
-    gap: 5vh;
+    justify-content: center;
+    align-items: center;
     font-family: "Noto Serif", serif;
+    width: 90%;
+`;
+
+const SubContainerComments = styled.div`
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+
+    @media (max-width: 1200px) {
+        width: 70%;
+    }
+
+    @media (max-width: 1000px) {
+        width: 80%;
+    }
 
     @media (max-width: 700px) {
         gap: 2vh;
+        width: 90%;
+    }
+
+    @media (max-width: 400px) {
+        width: 95%;
     }
 `;
 
@@ -101,7 +123,6 @@ const TitleCardsNews = styled.h1`
     }
 `;
 
-
 const ContainerComment = styled.div`
     background: #f7f6f6;
     border: 1px solid #a5a3a3;
@@ -114,6 +135,22 @@ const ContainerComment = styled.div`
 
 const ImageComment = styled.img`
     width: 60px;
+
+    @media (max-width: 400px) {
+        width: 50px;
+    }
+
+    @media (max-width: 300px) {
+        width: 40px;
+    }
+
+    @media (max-width: 200px) {
+        width: 30px;
+    }
+
+    @media (max-width: 100px) {
+        width: 5%;
+    }
 `;
 
 const ContainerTexsComments = styled.div`

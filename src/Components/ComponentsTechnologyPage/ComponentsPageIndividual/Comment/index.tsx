@@ -43,6 +43,22 @@ const ContainerComment = styled.div`
 
 const ImageComment = styled.img`
     width: 60px;
+
+    @media (max-width: 400px) {
+        width: 50px;
+    }
+
+    @media (max-width: 300px) {
+        width: 40px;
+    }
+
+    @media (max-width: 200px) {
+        width: 30px;
+    }
+
+    @media (max-width: 100px) {
+        width: 5%;
+    }
 `;
 
 const ExitIcon = styled.i`
@@ -50,6 +66,14 @@ const ExitIcon = styled.i`
     top: 5%;
     right: 1.5%;
     cursor: pointer;
+
+    @media (max-width: 500px) {
+        top: 1%;
+    }
+
+    @media (max-width: 300px) {
+        font-size: 5vw;
+    }
 `;
 
 const ContainerTexsComments = styled.div`

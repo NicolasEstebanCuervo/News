@@ -19,10 +19,7 @@ export default function TechnologyPage() {
                 </ContainerHeader>
                 <LineDivider2 />
 
-                <ContainerLists>
                     <ListComment />
-                    <ListOtherNews />
-                </ContainerLists>
             </SubContainerMain>
             <Footer />
         </ContainerMain>
@@ -86,10 +83,4 @@ const LineDivider2 = styled.hr`
     color: #161616;
     width: 90%;
     margin: 0;
-`;
-
-const ContainerLists = styled.main`
-    gap: 5%;
-    display: flex;
-    justify-content: center;
 `;
