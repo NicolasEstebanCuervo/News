@@ -4,16 +4,12 @@ import { useNewsForm } from "../../../../Context/ContextForm";
 import Comment from "../Comment";
 import FormComponent from "../FormComment";
 import styled from "@emotion/styled";
-import { useImage } from "../../../../Context/ContextImage";
 
 const ListComments = () => {
     const [heartFilled, setHeartFilled] = useState(false);
 
     const context = useNews();
     const contextForm = useNewsForm();
-    const imageContext = useImage();
-    const { getImageUrls } = imageContext;
-    const imageUrls = getImageUrls();
 
     const { newsData } = context;
 
@@ -33,7 +29,6 @@ const ListComments = () => {
 
     useEffect(() => {
         const randomImageUrl = generateProfileImageURL(Date.now());
-        imageContext.addImageUrl(randomImageUrl);
     }, []);
 
     const generateProfileImageURL = (email: number): string => {

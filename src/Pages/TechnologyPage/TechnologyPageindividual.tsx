@@ -5,7 +5,6 @@ import MoreText from "../../Components/ComponentsTechnologyPage/ComponentsPageIn
 import ListComment from "../../Components/ComponentsTechnologyPage/ComponentsPageIndividual/ListComments";
 import Footer from "../../Components/Footer";
 import { NewsFormProvider } from "../../Context/ContextForm";
-import { ImageProvider } from "../../Context/ContextImage";
 
 export default function TechnologyPage() {
     return (
@@ -18,9 +17,7 @@ export default function TechnologyPage() {
                 </ContainerHeader>
                 <LineDivider />
                 <NewsFormProvider>
-                    <ImageProvider>
                         <ListComment />
-                    </ImageProvider>
                 </NewsFormProvider>
             </SubContainerMain>
             <Footer />
