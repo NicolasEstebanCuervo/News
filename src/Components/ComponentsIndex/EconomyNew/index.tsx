@@ -30,7 +30,7 @@ export default function EconomyPage() {
                         <LearnMoreButton
                             href={`/Economy/:${newSelected.id}`}
                         >
-                            Learn More About
+                            Descubre más sobre
                         </LearnMoreButton>
                     </TextContainer>
                 )}

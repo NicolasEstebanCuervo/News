@@ -27,7 +27,7 @@ export default function MultiNews() {
 
     return (
         <ContainerMultiNews>
-            <TitleMultiNews>Latest news in the capital</TitleMultiNews>
+            <TitleMultiNews>Ultimas noticias en la capital</TitleMultiNews>
             <SubContainerMultiNews>
                 {newArray.map((index, i) => (
                     <ContainerIndividualMultiNews>
@@ -45,9 +45,9 @@ export default function MultiNews() {
                             {fncNewsTechnology[index].title}
                         </DescriptionMultiNews>
                         <ButtonMultiNews
-                            href={`/Politica/:${fncNewsTechnology[index].id}`}
+                            href={`/Technology/:${fncNewsTechnology[index].id}`}
                         >
-                            Read More{" "}
+                            Leer mas{" "}
                         </ButtonMultiNews>
                     </ContainerIndividualMultiNews>
                 ))}

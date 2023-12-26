@@ -11,6 +11,7 @@ import EntertainmentPage from "./Pages/EntertainmentPage";
 import PoliticsPageIndividual from "./Pages/PoliticsPage/PoliticsPageindividual";
 import EconomyPageIndividual from "./Pages/EconomyPage/EconomyPageindividual";
 import SciencePageIndividual from "./Pages/SciencePage/SciencePageindividual";
+import CulturePageIndividual from "./Pages/CulturePage/CulturePageIndividual";
 import SportsPageIndividual from "./Pages/SportsPage/SportsPageindividual";
 import EntertainmentPageIndividual from "./Pages/EntertainmentPage/EntertainmentPageindividual";
 
@@ -81,7 +82,7 @@ function App() {
                     <Route
                         path="/Culture/:id"
                         element={
-                            <SciencePageIndividual></SciencePageIndividual>
+                            <CulturePageIndividual></CulturePageIndividual>
                         }
                     />
                     <Route

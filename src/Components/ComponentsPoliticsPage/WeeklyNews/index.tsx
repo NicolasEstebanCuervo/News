@@ -16,7 +16,7 @@ export default function WeeklyNews() {
 
     return (
         <WeeklyNewsContainer>
-            <WeeklyNewsTitle>Weekly News</WeeklyNewsTitle>
+            <WeeklyNewsTitle>Noticia de la semana</WeeklyNewsTitle>
             {fncNewsPolitics.slice(0, 1).map((post, index) => (
                 <WeeklyNewsItem key={index}>
                     <NewsImage

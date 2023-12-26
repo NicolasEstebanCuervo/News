@@ -38,7 +38,7 @@ export default function HeaderComponent() {
                         <ButtonHeader
                             href={`/Politics/:${newSelected.id}`}
                         >
-                            Read More
+                            Leer mas
                         </ButtonHeader>
                     </ContainerTextsDescription>
                 </ContainerTexts>
