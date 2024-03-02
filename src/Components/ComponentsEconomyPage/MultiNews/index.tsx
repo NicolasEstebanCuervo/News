@@ -223,6 +223,7 @@ const ButtonMultiNews = styled.a`
     color: #ffffff92;
     align-self: flex-start;
     font-size: 22px;
+    width: 100%;
     font-weight: bold;
     margin: 0;
     cursor: pointer;
@@ -236,7 +237,7 @@ const ButtonMultiNews = styled.a`
     }
 
     @media (max-width: 700px) {
-        align-self: center;
+        text-align: center;
         font-size: 18px;
     }
 
@@ -248,3 +249,4 @@ const ButtonMultiNews = styled.a`
         font-size: 7vw;
     }
 `;
+
