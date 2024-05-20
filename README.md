@@ -1,7 +1,7 @@
 <div id="Header" align="center">
 
-   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmJ5Z25xbjh5bTRpd2U3MHd1azFxeHE4ZTAxZWk0NGs2MXpiMDU1aCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dQpUkK59l5Imxsh8jN/giphy.gif" width="300">   
-   <h1 align="center">Synapsify 📒 - Finalizado </h1>
+   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXRidTZmdmY1ZTB2enl1enV6OWJwcXNoMmh3ZGYyanVveHI0OWVqbCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/n2IPMYMthV0m4/giphy.gif" width="300">   
+   <h1 align="center">News 🧾 - Finalizado </h1>
 
 </div>
 
